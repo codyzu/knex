@@ -54,7 +54,7 @@
     "coveralls": "cat ./test/coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "jshint": "jshint test/. src/.",
     "prepublish": "npm run build",
-    "install": "npm run build"
+    "preinstall": "npm run babel"
   },
   "bin": {
     "knex": "./lib/bin/cli.js"
