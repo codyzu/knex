@@ -55,9 +55,6 @@
     "jshint": "jshint test/. src/.",
     "prepublish": "npm run build"
   },
-  "bin": {
-    "knex": "./lib/bin/cli.js"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/tgriesser/knex.git"
