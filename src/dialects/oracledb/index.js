@@ -13,6 +13,7 @@ var Promise = require('../../promise');
 var stream = require('stream');
 var helpers = require('../../helpers');
 var Transaction = require('./transaction');
+var OracleQueryStream = require('./stream')
 
 function Client_Oracledb() {
   Client_Oracle.apply(this, arguments);
@@ -193,6 +194,16 @@ Client_Oracledb.prototype.acquireRawConnection = function() {
 // when a connection times out or the pool is shutdown.
 Client_Oracledb.prototype.destroyRawConnection = function(connection, cb) {
   connection.release(cb);
+};
+
+Client_Oracledb.prototype._stream = function(connection, obj, stream, options) {
+  obj.sql = this.positionBindings(obj.sql);
+  return new Promise(function (resolver, rejecter) {
+    stream.on('error', rejecter);
+    stream.on('end', resolver);
+    var queryStream = new OracleQueryStream(connection, obj.sql, obj.bindings, options);
+    queryStream.pipe(stream)
+  });
 };
 
 // Runs the query on the specified connection, providing the bindings
