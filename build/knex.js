@@ -4332,16 +4332,16 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var inherits = __webpack_require__(52);
 
-	var Formatter = __webpack_require__(57);
+	var Formatter = __webpack_require__(58);
 	var Client = __webpack_require__(4);
 	var Promise = __webpack_require__(9);
 	var helpers = __webpack_require__(3);
 
-	var Transaction = __webpack_require__(58);
-	var QueryCompiler = __webpack_require__(59);
-	var SchemaCompiler = __webpack_require__(60);
-	var TableCompiler = __webpack_require__(61);
-	var ColumnCompiler = __webpack_require__(62);
+	var Transaction = __webpack_require__(59);
+	var QueryCompiler = __webpack_require__(60);
+	var SchemaCompiler = __webpack_require__(61);
+	var TableCompiler = __webpack_require__(62);
+	var ColumnCompiler = __webpack_require__(63);
 
 	// Always initialize with the "QueryBuilder" and "QueryCompiler"
 	// objects, which extend the base 'lib/query/builder' and
@@ -4362,7 +4362,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  driverName: 'mssql',
 
 	  _driver: function _driver() {
-	    return __webpack_require__(44);
+	    return __webpack_require__(45);
 	  },
 
 	  Transaction: Transaction,
@@ -4545,11 +4545,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	var Promise = __webpack_require__(9);
 	var helpers = __webpack_require__(3);
 
-	var Transaction = __webpack_require__(78);
-	var QueryCompiler = __webpack_require__(79);
-	var SchemaCompiler = __webpack_require__(80);
-	var TableCompiler = __webpack_require__(81);
-	var ColumnCompiler = __webpack_require__(82);
+	var Transaction = __webpack_require__(64);
+	var QueryCompiler = __webpack_require__(65);
+	var SchemaCompiler = __webpack_require__(66);
+	var TableCompiler = __webpack_require__(67);
+	var ColumnCompiler = __webpack_require__(68);
 
 	function Client_MySQL(config) {
 	  Client.call(this, config);
@@ -4563,7 +4563,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  driverName: 'mysql',
 
 	  _driver: function _driver() {
-	    return __webpack_require__(49);
+	    return __webpack_require__(46);
 	  },
 
 	  QueryCompiler: QueryCompiler,
@@ -4686,7 +4686,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var Promise = __webpack_require__(9);
 	var helpers = __webpack_require__(3);
 
-	var Transaction = __webpack_require__(63);
+	var Transaction = __webpack_require__(57);
 
 	var configOptions = ['isServer', 'stream', 'host', 'port', 'localAddress', 'socketPath', 'user', 'password', 'passwordSha1', 'database', 'connectTimeout', 'insecureAuth', 'supportBigNumbers', 'bigNumberStrings', 'decimalNumbers', 'dateStrings', 'debug', 'trace', 'stringifyObjects', 'timezone', 'flags', 'queryFormat', 'pool', 'ssl', 'multipleStatements', 'namedPlaceholders', 'typeCast', 'charsetNumber', 'compress'];
 
@@ -4706,7 +4706,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  Transaction: Transaction,
 
 	  _driver: function _driver() {
-	    return __webpack_require__(45);
+	    return __webpack_require__(44);
 	  },
 
 	  // Get a raw connection, called by the `pool` whenever a new
@@ -4767,20 +4767,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _lodash = __webpack_require__(1);
 
 	var inherits = __webpack_require__(52);
-	var Formatter = __webpack_require__(64);
+	var Formatter = __webpack_require__(69);
 	var Client = __webpack_require__(4);
 	var Promise = __webpack_require__(9);
 	var helpers = __webpack_require__(3);
 	var SqlString = __webpack_require__(26);
 
-	var Transaction = __webpack_require__(65);
-	var QueryCompiler = __webpack_require__(66);
-	var SchemaCompiler = __webpack_require__(67);
-	var ColumnBuilder = __webpack_require__(68);
-	var ColumnCompiler = __webpack_require__(69);
-	var TableCompiler = __webpack_require__(70);
-	var OracleQueryStream = __webpack_require__(71);
-	var ReturningHelper = __webpack_require__(72).ReturningHelper;
+	var Transaction = __webpack_require__(70);
+	var QueryCompiler = __webpack_require__(71);
+	var SchemaCompiler = __webpack_require__(72);
+	var ColumnBuilder = __webpack_require__(73);
+	var ColumnCompiler = __webpack_require__(74);
+	var TableCompiler = __webpack_require__(75);
+	var OracleQueryStream = __webpack_require__(76);
+	var ReturningHelper = __webpack_require__(77).ReturningHelper;
 
 	// Always initialize with the "QueryBuilder" and "QueryCompiler"
 	// objects, which extend the base 'lib/query/builder' and
@@ -4797,7 +4797,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  driverName: 'oracle',
 
 	  _driver: function _driver() {
-	    return __webpack_require__(46);
+	    return __webpack_require__(47);
 	  },
 
 	  Transaction: Transaction,
@@ -4951,16 +4951,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _ = __webpack_require__(1);
 	var inherits = __webpack_require__(52);
 	var Client_Oracle = __webpack_require__(33);
-	var QueryCompiler = __webpack_require__(83);
-	var ColumnCompiler = __webpack_require__(84);
-	var Formatter = __webpack_require__(85);
-	var BlobHelper = __webpack_require__(86).BlobHelper;
-	var ReturningHelper = __webpack_require__(86).ReturningHelper;
+	var QueryCompiler = __webpack_require__(78);
+	var ColumnCompiler = __webpack_require__(79);
+	var Formatter = __webpack_require__(80);
+	var BlobHelper = __webpack_require__(81).BlobHelper;
+	var ReturningHelper = __webpack_require__(81).ReturningHelper;
 	var Promise = __webpack_require__(9);
 	var stream = __webpack_require__(96);
 	var helpers = __webpack_require__(3);
-	var Transaction = __webpack_require__(87);
-	var OracleQueryStream = __webpack_require__(88);
+	var Transaction = __webpack_require__(82);
+	var OracleQueryStream = __webpack_require__(83);
 
 	function Client_Oracledb() {
 	  Client_Oracle.apply(this, arguments);
@@ -5147,7 +5147,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return new Promise(function (resolver, rejecter) {
 	    stream.on('error', rejecter);
 	    stream.on('end', resolver);
-	    var queryStream = new OracleQueryStream(connection, obj.sql, obj.bindings, options);
+	    var queryStream = connection.reader(obj.sql, obj.bindings || []);
 	    queryStream.pipe(stream);
 	  });
 	};
@@ -5319,12 +5319,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	var inherits = __webpack_require__(52);
 	var Client = __webpack_require__(4);
 	var Promise = __webpack_require__(9);
-	var utils = __webpack_require__(73);
+	var utils = __webpack_require__(84);
 
-	var QueryCompiler = __webpack_require__(74);
-	var ColumnCompiler = __webpack_require__(75);
-	var TableCompiler = __webpack_require__(76);
-	var SchemaCompiler = __webpack_require__(77);
+	var QueryCompiler = __webpack_require__(85);
+	var ColumnCompiler = __webpack_require__(86);
+	var TableCompiler = __webpack_require__(87);
+	var SchemaCompiler = __webpack_require__(88);
 	var PGQueryStream;
 
 	function Client_PG(config) {
@@ -5354,7 +5354,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  driverName: 'pg',
 
 	  _driver: function _driver() {
-	    return __webpack_require__(47);
+	    return __webpack_require__(48);
 	  },
 
 	  wrapIdentifier: function wrapIdentifier(value) {
@@ -5442,7 +5442,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 
 	  _stream: function _stream(connection, obj, stream, options) {
-	    PGQueryStream = process.browser ? undefined : __webpack_require__(48);
+	    PGQueryStream = process.browser ? undefined : __webpack_require__(49);
 	    var sql = obj.sql = this.positionBindings(obj.sql);
 	    return new Promise(function (resolver, rejecter) {
 	      var queryStream = connection.query(new PGQueryStream(sql, obj.bindings, options));
@@ -6782,8 +6782,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 	var escapeStringRegexp = __webpack_require__(100);
-	var ansiStyles = __webpack_require__(102);
-	var stripAnsi = __webpack_require__(101);
+	var ansiStyles = __webpack_require__(101);
+	var stripAnsi = __webpack_require__(102);
 	var hasAnsi = __webpack_require__(103);
 	var supportsColor = __webpack_require__(104);
 	var defineProps = Object.defineProperties;
@@ -7404,6 +7404,51 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _lodash = __webpack_require__(1);
 
+	var Transaction = __webpack_require__(16);
+	var inherits = __webpack_require__(52);
+	var debug = __webpack_require__(53)('knex:tx');
+	var helpers = __webpack_require__(3);
+
+	function Transaction_MySQL2() {
+	  Transaction.apply(this, arguments);
+	}
+	inherits(Transaction_MySQL2, Transaction);
+
+	(0, _lodash.assign)(Transaction_MySQL2.prototype, {
+
+	  query: function query(conn, sql, status, value) {
+	    var t = this;
+	    var q = this.trxClient.query(conn, sql)['catch'](function (err) {
+	      return err.code === 'ER_SP_DOES_NOT_EXIST';
+	    }, function () {
+	      helpers.warn('Transaction was implicitly committed, do not mix transactions and DDL with MySQL (#805)');
+	    })['catch'](function (err) {
+	      status = 2;
+	      value = err;
+	      t._completed = true;
+	      debug('%s error running transaction query', t.txid);
+	    }).tap(function () {
+	      if (status === 1) t._resolver(value);
+	      if (status === 2) t._rejecter(value);
+	    });
+	    if (status === 1 || status === 2) {
+	      t._completed = true;
+	    }
+	    return q;
+	  }
+
+	});
+
+	module.exports = Transaction_MySQL2;
+
+/***/ },
+/* 58 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _lodash = __webpack_require__(1);
+
 	var inherits = __webpack_require__(52);
 	var Formatter = __webpack_require__(15);
 
@@ -7431,7 +7476,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = MSSQL_Formatter;
 
 /***/ },
-/* 58 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7536,7 +7581,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Transaction_MSSQL;
 
 /***/ },
-/* 59 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -7726,7 +7771,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = QueryCompiler_MSSQL;
 
 /***/ },
-/* 60 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -7786,7 +7831,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = SchemaCompiler_MSSQL;
 
 /***/ },
-/* 61 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -7919,7 +7964,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = TableCompiler_MSSQL;
 
 /***/ },
-/* 62 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -8029,7 +8074,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = ColumnCompiler_MSSQL;
 
 /***/ },
-/* 63 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8041,17 +8086,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	var debug = __webpack_require__(53)('knex:tx');
 	var helpers = __webpack_require__(3);
 
-	function Transaction_MySQL2() {
+	function Transaction_MySQL() {
 	  Transaction.apply(this, arguments);
 	}
-	inherits(Transaction_MySQL2, Transaction);
+	inherits(Transaction_MySQL, Transaction);
 
-	(0, _lodash.assign)(Transaction_MySQL2.prototype, {
+	(0, _lodash.assign)(Transaction_MySQL.prototype, {
 
 	  query: function query(conn, sql, status, value) {
 	    var t = this;
 	    var q = this.trxClient.query(conn, sql)['catch'](function (err) {
-	      return err.code === 'ER_SP_DOES_NOT_EXIST';
+	      return err.errno === 1305;
 	    }, function () {
 	      helpers.warn('Transaction was implicitly committed, do not mix transactions and DDL with MySQL (#805)');
 	    })['catch'](function (err) {
@@ -8071,10 +8116,460 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	});
 
-	module.exports = Transaction_MySQL2;
+	module.exports = Transaction_MySQL;
 
 /***/ },
-/* 64 */
+/* 65 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	// MySQL Query Compiler
+	// ------
+	'use strict';
+
+	var _lodash = __webpack_require__(1);
+
+	var inherits = __webpack_require__(52);
+	var QueryCompiler = __webpack_require__(18);
+
+	function QueryCompiler_MySQL(client, builder) {
+	  QueryCompiler.call(this, client, builder);
+	}
+	inherits(QueryCompiler_MySQL, QueryCompiler);
+
+	(0, _lodash.assign)(QueryCompiler_MySQL.prototype, {
+
+	  _emptyInsertValue: '() values ()',
+
+	  // Update method, including joins, wheres, order & limits.
+	  update: function update() {
+	    var join = this.join();
+	    var updates = this._prepUpdate(this.single.update);
+	    var where = this.where();
+	    var order = this.order();
+	    var limit = this.limit();
+	    return 'update ' + this.tableName + (join ? ' ' + join : '') + ' set ' + updates.join(', ') + (where ? ' ' + where : '') + (order ? ' ' + order : '') + (limit ? ' ' + limit : '');
+	  },
+
+	  forUpdate: function forUpdate() {
+	    return 'for update';
+	  },
+
+	  forShare: function forShare() {
+	    return 'lock in share mode';
+	  },
+
+	  // Compiles a `columnInfo` query.
+	  columnInfo: function columnInfo() {
+	    var column = this.single.columnInfo;
+	    return {
+	      sql: 'select * from information_schema.columns where table_name = ? and table_schema = ?',
+	      bindings: [this.single.table, this.client.database()],
+	      output: function output(resp) {
+	        var out = resp.reduce(function (columns, val) {
+	          columns[val.COLUMN_NAME] = {
+	            defaultValue: val.COLUMN_DEFAULT,
+	            type: val.DATA_TYPE,
+	            maxLength: val.CHARACTER_MAXIMUM_LENGTH,
+	            nullable: val.IS_NULLABLE === 'YES'
+	          };
+	          return columns;
+	        }, {});
+	        return column && out[column] || out;
+	      }
+	    };
+	  },
+
+	  limit: function limit() {
+	    var noLimit = !this.single.limit && this.single.limit !== 0;
+	    if (noLimit && !this.single.offset) return '';
+
+	    // Workaround for offset only, see http://stackoverflow.com/questions/255517/mysql-offset-infinite-rows
+	    return 'limit ' + (this.single.offset && noLimit ? '18446744073709551615' : this.formatter.parameter(this.single.limit));
+	  }
+
+	});
+
+	// Set the QueryBuilder & QueryCompiler on the client object,
+	// in case anyone wants to modify things to suit their own purposes.
+	module.exports = QueryCompiler_MySQL;
+
+/***/ },
+/* 66 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	// MySQL Schema Compiler
+	// -------
+	'use strict';
+
+	var _lodash = __webpack_require__(1);
+
+	var inherits = __webpack_require__(52);
+	var SchemaCompiler = __webpack_require__(20);
+
+	function SchemaCompiler_MySQL(client, builder) {
+	  SchemaCompiler.call(this, client, builder);
+	}
+	inherits(SchemaCompiler_MySQL, SchemaCompiler);
+
+	(0, _lodash.assign)(SchemaCompiler_MySQL.prototype, {
+
+	  // Rename a table on the schema.
+	  renameTable: function renameTable(tableName, to) {
+	    this.pushQuery('rename table ' + this.formatter.wrap(tableName) + ' to ' + this.formatter.wrap(to));
+	  },
+
+	  // Check whether a table exists on the query.
+	  hasTable: function hasTable(tableName) {
+	    this.pushQuery({
+	      sql: 'show tables like ' + this.formatter.parameter(tableName),
+	      output: function output(resp) {
+	        return resp.length > 0;
+	      }
+	    });
+	  },
+
+	  // Check whether a column exists on the schema.
+	  hasColumn: function hasColumn(tableName, column) {
+	    this.pushQuery({
+	      sql: 'show columns from ' + this.formatter.wrap(tableName) + ' like ' + this.formatter.parameter(column),
+	      output: function output(resp) {
+	        return resp.length > 0;
+	      }
+	    });
+	  }
+
+	});
+
+	module.exports = SchemaCompiler_MySQL;
+
+/***/ },
+/* 67 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	// MySQL Table Builder & Compiler
+	// -------
+	'use strict';
+
+	var _lodash = __webpack_require__(1);
+
+	// Table Compiler
+	// ------
+
+	var inherits = __webpack_require__(52);
+	var TableCompiler = __webpack_require__(22);
+	var helpers = __webpack_require__(3);
+	var Promise = __webpack_require__(9);
+
+	function TableCompiler_MySQL() {
+	  TableCompiler.apply(this, arguments);
+	}
+	inherits(TableCompiler_MySQL, TableCompiler);
+
+	(0, _lodash.assign)(TableCompiler_MySQL.prototype, {
+
+	  createQuery: function createQuery(columns, ifNot) {
+	    var createStatement = ifNot ? 'create table if not exists ' : 'create table ';
+	    var client = this.client,
+	        conn = {},
+	        sql = createStatement + this.tableName() + ' (' + columns.sql.join(', ') + ')';
+
+	    // Check if the connection settings are set.
+	    if (client.connectionSettings) {
+	      conn = client.connectionSettings;
+	    }
+
+	    var charset = this.single.charset || conn.charset || '';
+	    var collation = this.single.collate || conn.collate || '';
+	    var engine = this.single.engine || '';
+
+	    // var conn = builder.client.connectionSettings;
+	    if (charset) sql += ' default character set ' + charset;
+	    if (collation) sql += ' collate ' + collation;
+	    if (engine) sql += ' engine = ' + engine;
+
+	    if (this.single.comment) {
+	      var comment = this.single.comment || '';
+	      if (comment.length > 60) helpers.warn('The max length for a table comment is 60 characters');
+	      sql += " comment = '" + comment + "'";
+	    }
+
+	    this.pushQuery(sql);
+	  },
+
+	  addColumnsPrefix: 'add ',
+
+	  dropColumnPrefix: 'drop ',
+
+	  // Compiles the comment on the table.
+	  comment: function comment(_comment) {
+	    this.pushQuery('alter table ' + this.tableName() + " comment = '" + _comment + "'");
+	  },
+
+	  changeType: function changeType() {
+	    // alter table + table + ' modify ' + wrapped + '// type';
+	  },
+
+	  // Renames a column on the table.
+	  renameColumn: function renameColumn(from, to) {
+	    var compiler = this;
+	    var table = this.tableName();
+	    var wrapped = this.formatter.wrap(from) + ' ' + this.formatter.wrap(to);
+
+	    this.pushQuery({
+	      sql: 'show fields from ' + table + ' where field = ' + this.formatter.parameter(from),
+	      output: function output(resp) {
+	        var column = resp[0];
+	        var runner = this;
+	        return compiler.getFKRefs(runner).get(0).then(function (refs) {
+	          return Promise['try'](function () {
+	            if (!refs.length) {
+	              return;
+	            }
+	            return compiler.dropFKRefs(runner, refs);
+	          }).then(function () {
+	            var sql = 'alter table ' + table + ' change ' + wrapped + ' ' + column.Type;
+
+	            if (String(column.Null).toUpperCase() !== 'YES') {
+	              sql += ' NOT NULL';
+	            }
+	            if (column.Default !== void 0 && column.Default !== null) {
+	              sql += ' DEFAULT \'' + column.Default + '\'';
+	            }
+
+	            return runner.query({
+	              sql: sql
+	            });
+	          }).then(function () {
+	            if (!refs.length) {
+	              return;
+	            }
+	            return compiler.createFKRefs(runner, refs.map(function (ref) {
+	              if (ref.REFERENCED_COLUMN_NAME === from) {
+	                ref.REFERENCED_COLUMN_NAME = to;
+	              }
+	              if (ref.COLUMN_NAME === from) {
+	                ref.COLUMN_NAME = to;
+	              }
+	              return ref;
+	            }));
+	          });
+	        });
+	      }
+	    });
+	  },
+
+	  getFKRefs: function getFKRefs(runner) {
+	    var formatter = this.client.formatter();
+	    var sql = 'SELECT KCU.CONSTRAINT_NAME, KCU.TABLE_NAME, KCU.COLUMN_NAME, ' + '       KCU.REFERENCED_TABLE_NAME, KCU.REFERENCED_COLUMN_NAME, ' + '       RC.UPDATE_RULE, RC.DELETE_RULE ' + 'FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE AS KCU ' + 'JOIN INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS AS RC ' + '       USING(CONSTRAINT_NAME)' + 'WHERE KCU.REFERENCED_TABLE_NAME = ' + formatter.parameter(this.tableNameRaw) + ' ' + '  AND KCU.CONSTRAINT_SCHEMA = ' + formatter.parameter(this.client.database()) + ' ' + '  AND RC.CONSTRAINT_SCHEMA = ' + formatter.parameter(this.client.database());
+
+	    return runner.query({
+	      sql: sql,
+	      bindings: formatter.bindings
+	    });
+	  },
+
+	  dropFKRefs: function dropFKRefs(runner, refs) {
+	    var formatter = this.client.formatter();
+
+	    return Promise.all(refs.map(function (ref) {
+	      var constraintName = formatter.wrap(ref.CONSTRAINT_NAME);
+	      var tableName = formatter.wrap(ref.TABLE_NAME);
+	      return runner.query({
+	        sql: 'alter table ' + tableName + ' drop foreign key ' + constraintName
+	      });
+	    }));
+	  },
+	  createFKRefs: function createFKRefs(runner, refs) {
+	    var formatter = this.client.formatter();
+
+	    return Promise.all(refs.map(function (ref) {
+	      var tableName = formatter.wrap(ref.TABLE_NAME);
+	      var keyName = formatter.wrap(ref.CONSTRAINT_NAME);
+	      var column = formatter.columnize(ref.COLUMN_NAME);
+	      var references = formatter.columnize(ref.REFERENCED_COLUMN_NAME);
+	      var inTable = formatter.wrap(ref.REFERENCED_TABLE_NAME);
+	      var onUpdate = ' ON UPDATE ' + ref.UPDATE_RULE;
+	      var onDelete = ' ON DELETE ' + ref.DELETE_RULE;
+
+	      return runner.query({
+	        sql: 'alter table ' + tableName + ' add constraint ' + keyName + ' ' + 'foreign key (' + column + ') references ' + inTable + ' (' + references + ')' + onUpdate + onDelete
+	      });
+	    }));
+	  },
+	  index: function index(columns, indexName) {
+	    indexName = indexName ? this.formatter.wrap(indexName) : this._indexCommand('index', this.tableNameRaw, columns);
+	    this.pushQuery('alter table ' + this.tableName() + " add index " + indexName + "(" + this.formatter.columnize(columns) + ")");
+	  },
+
+	  primary: function primary(columns, indexName) {
+	    indexName = indexName ? this.formatter.wrap(indexName) : this._indexCommand('primary', this.tableNameRaw, columns);
+	    this.pushQuery('alter table ' + this.tableName() + " add primary key " + indexName + "(" + this.formatter.columnize(columns) + ")");
+	  },
+
+	  unique: function unique(columns, indexName) {
+	    indexName = indexName ? this.formatter.wrap(indexName) : this._indexCommand('unique', this.tableNameRaw, columns);
+	    this.pushQuery('alter table ' + this.tableName() + " add unique " + indexName + "(" + this.formatter.columnize(columns) + ")");
+	  },
+
+	  // Compile a drop index command.
+	  dropIndex: function dropIndex(columns, indexName) {
+	    indexName = indexName ? this.formatter.wrap(indexName) : this._indexCommand('index', this.tableNameRaw, columns);
+	    this.pushQuery('alter table ' + this.tableName() + ' drop index ' + indexName);
+	  },
+
+	  // Compile a drop foreign key command.
+	  dropForeign: function dropForeign(columns, indexName) {
+	    indexName = indexName ? this.formatter.wrap(indexName) : this._indexCommand('foreign', this.tableNameRaw, columns);
+	    this.pushQuery('alter table ' + this.tableName() + ' drop foreign key ' + indexName);
+	  },
+
+	  // Compile a drop primary key command.
+	  dropPrimary: function dropPrimary() {
+	    this.pushQuery('alter table ' + this.tableName() + ' drop primary key');
+	  },
+
+	  // Compile a drop unique key command.
+	  dropUnique: function dropUnique(column, indexName) {
+	    indexName = indexName ? this.formatter.wrap(indexName) : this._indexCommand('unique', this.tableNameRaw, column);
+	    this.pushQuery('alter table ' + this.tableName() + ' drop index ' + indexName);
+	  }
+
+	});
+
+	module.exports = TableCompiler_MySQL;
+
+/***/ },
+/* 68 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	// MySQL Column Compiler
+	// -------
+	'use strict';
+
+	var _lodash = __webpack_require__(1);
+
+	var inherits = __webpack_require__(52);
+	var ColumnCompiler = __webpack_require__(24);
+	var helpers = __webpack_require__(3);
+
+	function ColumnCompiler_MySQL() {
+	  ColumnCompiler.apply(this, arguments);
+	  this.modifiers = ['unsigned', 'nullable', 'defaultTo', 'first', 'after', 'comment', 'collate'];
+	}
+	inherits(ColumnCompiler_MySQL, ColumnCompiler);
+
+	// Types
+	// ------
+
+	(0, _lodash.assign)(ColumnCompiler_MySQL.prototype, {
+
+	  increments: 'int unsigned not null auto_increment primary key',
+
+	  bigincrements: 'bigint unsigned not null auto_increment primary key',
+
+	  bigint: 'bigint',
+
+	  double: function double(precision, scale) {
+	    if (!precision) return 'double';
+	    return 'double(' + this._num(precision, 8) + ', ' + this._num(scale, 2) + ')';
+	  },
+
+	  integer: function integer(length) {
+	    length = length ? '(' + this._num(length, 11) + ')' : '';
+	    return 'int' + length;
+	  },
+
+	  mediumint: 'mediumint',
+
+	  smallint: 'smallint',
+
+	  tinyint: function tinyint(length) {
+	    length = length ? '(' + this._num(length, 1) + ')' : '';
+	    return 'tinyint' + length;
+	  },
+
+	  text: function text(column) {
+	    switch (column) {
+	      case 'medium':
+	      case 'mediumtext':
+	        return 'mediumtext';
+	      case 'long':
+	      case 'longtext':
+	        return 'longtext';
+	      default:
+	        return 'text';
+	    }
+	  },
+
+	  mediumtext: function mediumtext() {
+	    return this.text('medium');
+	  },
+
+	  longtext: function longtext() {
+	    return this.text('long');
+	  },
+
+	  enu: function enu(allowed) {
+	    return "enum('" + allowed.join("', '") + "')";
+	  },
+
+	  datetime: 'datetime',
+
+	  timestamp: 'timestamp',
+
+	  bit: function bit(length) {
+	    return length ? 'bit(' + this._num(length) + ')' : 'bit';
+	  },
+
+	  binary: function binary(length) {
+	    return length ? 'varbinary(' + this._num(length) + ')' : 'blob';
+	  },
+
+	  // Modifiers
+	  // ------
+
+	  defaultTo: function defaultTo(value) {
+	    /*jshint unused: false*/
+	    var defaultVal = ColumnCompiler_MySQL.super_.prototype.defaultTo.apply(this, arguments);
+	    if (this.type !== 'blob' && this.type.indexOf('text') === -1) {
+	      return defaultVal;
+	    }
+	    return '';
+	  },
+
+	  unsigned: function unsigned() {
+	    return 'unsigned';
+	  },
+
+	  first: function first() {
+	    return 'first';
+	  },
+
+	  after: function after(column) {
+	    return 'after ' + this.formatter.wrap(column);
+	  },
+
+	  comment: function comment(_comment) {
+	    if (_comment && _comment.length > 255) {
+	      helpers.warn('Your comment is longer than the max comment length for MySQL');
+	    }
+	    return _comment && "comment '" + _comment + "'";
+	  },
+
+	  collate: function collate(collation) {
+	    return collation && "collate '" + collation + "'";
+	  }
+
+	});
+
+	module.exports = ColumnCompiler_MySQL;
+
+/***/ },
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8083,7 +8578,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var inherits = __webpack_require__(52);
 	var Formatter = __webpack_require__(15);
-	var ReturningHelper = __webpack_require__(72).ReturningHelper;
+	var ReturningHelper = __webpack_require__(77).ReturningHelper;
 
 	function Oracle_Formatter(client) {
 	  Formatter.call(this, client);
@@ -8111,7 +8606,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Oracle_Formatter;
 
 /***/ },
-/* 65 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8174,7 +8669,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Oracle_Transaction;
 
 /***/ },
-/* 66 */
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -8187,7 +8682,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var inherits = __webpack_require__(52);
 	var QueryCompiler = __webpack_require__(18);
 	var helpers = __webpack_require__(3);
-	var ReturningHelper = __webpack_require__(72).ReturningHelper;
+	var ReturningHelper = __webpack_require__(77).ReturningHelper;
 
 	// Query Compiler
 	// -------
@@ -8406,7 +8901,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = QueryCompiler_Oracle;
 
 /***/ },
-/* 67 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -8416,7 +8911,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var inherits = __webpack_require__(52);
 	var SchemaCompiler = __webpack_require__(20);
-	var utils = __webpack_require__(72);
+	var utils = __webpack_require__(77);
 
 	function SchemaCompiler_Oracle() {
 	  SchemaCompiler.apply(this, arguments);
@@ -8475,7 +8970,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = SchemaCompiler_Oracle;
 
 /***/ },
-/* 68 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8500,7 +8995,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = ColumnBuilder_Oracle;
 
 /***/ },
-/* 69 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8508,7 +9003,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _lodash = __webpack_require__(1);
 
 	var inherits = __webpack_require__(52);
-	var utils = __webpack_require__(72);
+	var utils = __webpack_require__(77);
 	var Raw = __webpack_require__(2);
 	var ColumnCompiler = __webpack_require__(24);
 
@@ -8638,7 +9133,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = ColumnCompiler_Oracle;
 
 /***/ },
-/* 70 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8649,7 +9144,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	// ------
 
 	var inherits = __webpack_require__(52);
-	var utils = __webpack_require__(72);
+	var utils = __webpack_require__(77);
 	var TableCompiler = __webpack_require__(22);
 	var helpers = __webpack_require__(3);
 
@@ -8744,7 +9239,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = TableCompiler_Oracle;
 
 /***/ },
-/* 71 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {
@@ -8803,7 +9298,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
 
 /***/ },
-/* 72 */
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8844,997 +9339,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 73 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict';
-
-	function dateToString(date) {
-	  function pad(number, digits) {
-	    number = number.toString();
-	    while (number.length < digits) {
-	      number = "0" + number;
-	    }
-	    return number;
-	  }
-
-	  var offset = -date.getTimezoneOffset();
-	  var ret = pad(date.getFullYear(), 4) + '-' + pad(date.getMonth() + 1, 2) + '-' + pad(date.getDate(), 2) + 'T' + pad(date.getHours(), 2) + ':' + pad(date.getMinutes(), 2) + ':' + pad(date.getSeconds(), 2) + '.' + pad(date.getMilliseconds(), 3);
-
-	  if (offset < 0) {
-	    ret += "-";
-	    offset *= -1;
-	  } else {
-	    ret += "+";
-	  }
-
-	  return ret + pad(Math.floor(offset / 60), 2) + ":" + pad(offset % 60, 2);
-	}
-
-	var prepareObject;
-	var arrayString;
-
-	// converts values from javascript types
-	// to their 'raw' counterparts for use as a postgres parameter
-	// note: you can override this function to provide your own conversion mechanism
-	// for complex types, etc...
-	var prepareValue = function prepareValue(val, seen, valueForUndefined) {
-	  if (val instanceof Buffer) {
-	    return val;
-	  }
-	  if (val instanceof Date) {
-	    return dateToString(val);
-	  }
-	  if (Array.isArray(val)) {
-	    return arrayString(val);
-	  }
-	  if (val === null) {
-	    return null;
-	  }
-	  if (val === undefined) {
-	    return valueForUndefined;
-	  }
-	  if (typeof val === 'object') {
-	    return prepareObject(val, seen);
-	  }
-	  return val.toString();
-	};
-
-	prepareObject = function prepareObject(val, seen) {
-	  if (val && typeof val.toPostgres === 'function') {
-	    seen = seen || [];
-	    if (seen.indexOf(val) !== -1) {
-	      throw new Error('circular reference detected while preparing "' + val + '" for query');
-	    }
-	    seen.push(val);
-
-	    return prepareValue(val.toPostgres(prepareValue), seen);
-	  }
-	  return JSON.stringify(val);
-	};
-
-	// convert a JS array to a postgres array literal
-	// uses comma separator so won't work for types like box that use
-	// a different array separator.
-	arrayString = function arrayString(val) {
-	  return '{' + val.map(function (elem) {
-	    if (elem === null || elem === undefined) {
-	      return 'NULL';
-	    }
-	    if (Array.isArray(elem)) {
-	      return arrayString(elem);
-	    }
-	    return JSON.stringify(prepareValue(elem));
-	  }).join(',') + '}';
-	};
-
-	function normalizeQueryConfig(config, values, callback) {
-	  //can take in strings or config objects
-	  config = typeof config === 'string' ? { text: config } : config;
-	  if (values) {
-	    if (typeof values === 'function') {
-	      config.callback = values;
-	    } else {
-	      config.values = values;
-	    }
-	  }
-	  if (callback) {
-	    config.callback = callback;
-	  }
-	  return config;
-	}
-
-	module.exports = {
-	  prepareValue: prepareValue,
-	  normalizeQueryConfig: normalizeQueryConfig
-	};
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(95).Buffer))
-
-/***/ },
-/* 74 */
-/***/ function(module, exports, __webpack_require__) {
-
-	
-	// PostgreSQL Query Builder & Compiler
-	// ------
-	'use strict';
-
-	var _lodash = __webpack_require__(1);
-
-	var inherits = __webpack_require__(52);
-
-	var QueryCompiler = __webpack_require__(18);
-
-	function QueryCompiler_PG(client, builder) {
-	  QueryCompiler.call(this, client, builder);
-	}
-	inherits(QueryCompiler_PG, QueryCompiler);
-
-	(0, _lodash.assign)(QueryCompiler_PG.prototype, {
-
-	  // Compiles a truncate query.
-	  truncate: function truncate() {
-	    return 'truncate ' + this.tableName + ' restart identity';
-	  },
-
-	  // is used if the an array with multiple empty values supplied
-	  _defaultInsertValue: 'default',
-
-	  // Compiles an `insert` query, allowing for multiple
-	  // inserts using a single query statement.
-	  insert: function insert() {
-	    var sql = QueryCompiler.prototype.insert.call(this);
-	    if (sql === '') return sql;
-	    var returning = this.single.returning;
-	    return {
-	      sql: sql + this._returning(returning),
-	      returning: returning
-	    };
-	  },
-
-	  // Compiles an `update` query, allowing for a return value.
-	  update: function update() {
-	    var updateData = this._prepUpdate(this.single.update);
-	    var wheres = this.where();
-	    var returning = this.single.returning;
-	    return {
-	      sql: 'update ' + this.tableName + ' set ' + updateData.join(', ') + (wheres ? ' ' + wheres : '') + this._returning(returning),
-	      returning: returning
-	    };
-	  },
-
-	  // Compiles an `update` query, allowing for a return value.
-	  del: function del() {
-	    var sql = QueryCompiler.prototype.del.apply(this, arguments);
-	    var returning = this.single.returning;
-	    return {
-	      sql: sql + this._returning(returning),
-	      returning: returning
-	    };
-	  },
-
-	  _returning: function _returning(value) {
-	    return value ? ' returning ' + this.formatter.columnize(value) : '';
-	  },
-
-	  forUpdate: function forUpdate() {
-	    return 'for update';
-	  },
-
-	  forShare: function forShare() {
-	    return 'for share';
-	  },
-
-	  // Compiles a columnInfo query
-	  columnInfo: function columnInfo() {
-	    var column = this.single.columnInfo;
-
-	    var sql = 'select * from information_schema.columns where table_name = ? and table_catalog = ?';
-	    var bindings = [this.single.table, this.client.database()];
-
-	    if (this.single.schema) {
-	      sql += ' and table_schema = ?';
-	      bindings.push(this.single.schema);
-	    } else {
-	      sql += ' and table_schema = current_schema';
-	    }
-
-	    return {
-	      sql: sql,
-	      bindings: bindings,
-	      output: function output(resp) {
-	        var out = (0, _lodash.reduce)(resp.rows, function (columns, val) {
-	          columns[val.column_name] = {
-	            type: val.data_type,
-	            maxLength: val.character_maximum_length,
-	            nullable: val.is_nullable === 'YES',
-	            defaultValue: val.column_default
-	          };
-	          return columns;
-	        }, {});
-	        return column && out[column] || out;
-	      }
-	    };
-	  }
-
-	});
-
-	module.exports = QueryCompiler_PG;
-
-/***/ },
-/* 75 */
-/***/ function(module, exports, __webpack_require__) {
-
-	
-	// PostgreSQL Column Compiler
-	// -------
-
-	'use strict';
-
-	var _lodash = __webpack_require__(1);
-
-	var inherits = __webpack_require__(52);
-	var ColumnCompiler = __webpack_require__(24);
-	var helpers = __webpack_require__(3);
-
-	function ColumnCompiler_PG() {
-	  ColumnCompiler.apply(this, arguments);
-	  this.modifiers = ['nullable', 'defaultTo', 'comment'];
-	}
-	inherits(ColumnCompiler_PG, ColumnCompiler);
-
-	(0, _lodash.assign)(ColumnCompiler_PG.prototype, {
-
-	  // Types
-	  // ------
-	  bigincrements: 'bigserial primary key',
-	  bigint: 'bigint',
-	  binary: 'bytea',
-
-	  bit: function bit(column) {
-	    return column.length !== false ? 'bit(' + column.length + ')' : 'bit';
-	  },
-
-	  bool: 'boolean',
-
-	  // Create the column definition for an enum type.
-	  // Using method "2" here: http://stackoverflow.com/a/10984951/525714
-	  enu: function enu(allowed) {
-	    return 'text check (' + this.formatter.wrap(this.args[0]) + " in ('" + allowed.join("', '") + "'))";
-	  },
-
-	  double: 'double precision',
-	  floating: 'real',
-	  increments: 'serial primary key',
-	  json: function json(jsonb) {
-	    if (jsonb) helpers.deprecate('json(true)', 'jsonb()');
-	    return jsonColumn(this.client, jsonb);
-	  },
-	  jsonb: function jsonb() {
-	    return jsonColumn(this.client, true);
-	  },
-	  smallint: 'smallint',
-	  tinyint: 'smallint',
-	  datetime: function datetime(without) {
-	    return without ? 'timestamp' : 'timestamptz';
-	  },
-	  timestamp: function timestamp(without) {
-	    return without ? 'timestamp' : 'timestamptz';
-	  },
-	  uuid: 'uuid',
-
-	  // Modifiers:
-	  // ------
-	  comment: function comment(_comment) {
-	    this.pushAdditional(function () {
-	      this.pushQuery('comment on column ' + this.tableCompiler.tableName() + '.' + this.formatter.wrap(this.args[0]) + " is " + (_comment ? "'" + _comment + "'" : 'NULL'));
-	    }, _comment);
-	  }
-
-	});
-
-	function jsonColumn(client, jsonb) {
-	  if (!client.version || parseFloat(client.version) >= 9.2) return jsonb ? 'jsonb' : 'json';
-	  return 'text';
-	}
-
-	module.exports = ColumnCompiler_PG;
-
-/***/ },
-/* 76 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// PostgreSQL Table Builder & Compiler
-	// -------
-
-	'use strict';
-
-	var _lodash = __webpack_require__(1);
-
-	var inherits = __webpack_require__(52);
-	var TableCompiler = __webpack_require__(22);
-
-	function TableCompiler_PG() {
-	  TableCompiler.apply(this, arguments);
-	}
-	inherits(TableCompiler_PG, TableCompiler);
-
-	// Compile a rename column command.
-	TableCompiler_PG.prototype.renameColumn = function (from, to) {
-	  return this.pushQuery({
-	    sql: 'alter table ' + this.tableName() + ' rename ' + this.formatter.wrap(from) + ' to ' + this.formatter.wrap(to)
-	  });
-	};
-
-	TableCompiler_PG.prototype.compileAdd = function (builder) {
-	  var table = this.formatter.wrap(builder);
-	  var columns = this.prefixArray('add column', this.getColumns(builder));
-	  return this.pushQuery({
-	    sql: 'alter table ' + table + ' ' + columns.join(', ')
-	  });
-	};
-
-	// Adds the "create" query to the query sequence.
-	TableCompiler_PG.prototype.createQuery = function (columns, ifNot) {
-	  var createStatement = ifNot ? 'create table if not exists ' : 'create table ';
-	  var sql = createStatement + this.tableName() + ' (' + columns.sql.join(', ') + ')';
-	  if (this.single.inherits) sql += ' inherits (' + this.formatter.wrap(this.single.inherits) + ')';
-	  this.pushQuery({
-	    sql: sql,
-	    bindings: columns.bindings
-	  });
-	  var hasComment = (0, _lodash.has)(this.single, 'comment');
-	  if (hasComment) this.comment(this.single.comment);
-	};
-
-	// Compiles the comment on the table.
-	TableCompiler_PG.prototype.comment = function (comment) {
-	  /*jshint unused: false*/
-	  this.pushQuery('comment on table ' + this.tableName() + ' is ' + "'" + (this.single.comment || '') + "'");
-	};
-
-	// Indexes:
-	// -------
-
-	TableCompiler_PG.prototype.primary = function (columns) {
-	  this.pushQuery('alter table ' + this.tableName() + " add primary key (" + this.formatter.columnize(columns) + ")");
-	};
-	TableCompiler_PG.prototype.unique = function (columns, indexName) {
-	  indexName = indexName ? this.formatter.wrap(indexName) : this._indexCommand('unique', this.tableNameRaw, columns);
-	  this.pushQuery('alter table ' + this.tableName() + ' add constraint ' + indexName + ' unique (' + this.formatter.columnize(columns) + ')');
-	};
-	TableCompiler_PG.prototype.index = function (columns, indexName, indexType) {
-	  indexName = indexName ? this.formatter.wrap(indexName) : this._indexCommand('index', this.tableNameRaw, columns);
-	  this.pushQuery('create index ' + indexName + ' on ' + this.tableName() + (indexType && ' using ' + indexType || '') + ' (' + this.formatter.columnize(columns) + ')');
-	};
-	TableCompiler_PG.prototype.dropPrimary = function () {
-	  var constraintName = this.formatter.wrap(this.tableNameRaw + '_pkey');
-	  this.pushQuery('alter table ' + this.tableName() + " drop constraint " + constraintName);
-	};
-	TableCompiler_PG.prototype.dropIndex = function (columns, indexName) {
-	  indexName = indexName ? this.formatter.wrap(indexName) : this._indexCommand('index', this.tableNameRaw, columns);
-	  this.pushQuery('drop index ' + indexName);
-	};
-	TableCompiler_PG.prototype.dropUnique = function (columns, indexName) {
-	  indexName = indexName ? this.formatter.wrap(indexName) : this._indexCommand('unique', this.tableNameRaw, columns);
-	  this.pushQuery('alter table ' + this.tableName() + ' drop constraint ' + indexName);
-	};
-	TableCompiler_PG.prototype.dropForeign = function (columns, indexName) {
-	  indexName = indexName ? this.formatter.wrap(indexName) : this._indexCommand('foreign', this.tableNameRaw, columns);
-	  this.pushQuery('alter table ' + this.tableName() + ' drop constraint ' + indexName);
-	};
-
-	module.exports = TableCompiler_PG;
-
-/***/ },
-/* 77 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// PostgreSQL Schema Compiler
-	// -------
-
-	'use strict';
-
-	var inherits = __webpack_require__(52);
-	var SchemaCompiler = __webpack_require__(20);
-
-	function SchemaCompiler_PG() {
-	  SchemaCompiler.apply(this, arguments);
-	}
-	inherits(SchemaCompiler_PG, SchemaCompiler);
-
-	// Check whether the current table
-	SchemaCompiler_PG.prototype.hasTable = function (tableName) {
-	  var sql = 'select * from information_schema.tables where table_name = ?';
-	  var bindings = [tableName];
-
-	  if (this.schema) {
-	    sql += ' and table_schema = ?';
-	    bindings.push(this.schema);
-	  } else {
-	    sql += ' and table_schema = current_schema';
-	  }
-
-	  this.pushQuery({
-	    sql: sql,
-	    bindings: bindings,
-	    output: function output(resp) {
-	      return resp.rows.length > 0;
-	    }
-	  });
-	};
-
-	// Compile the query to determine if a column exists in a table.
-	SchemaCompiler_PG.prototype.hasColumn = function (tableName, columnName) {
-	  var sql = 'select * from information_schema.columns where table_name = ? and column_name = ?';
-	  var bindings = [tableName, columnName];
-
-	  if (this.schema) {
-	    sql += ' and table_schema = ?';
-	    bindings.push(this.schema);
-	  } else {
-	    sql += ' and table_schema = current_schema';
-	  }
-
-	  this.pushQuery({
-	    sql: sql,
-	    bindings: bindings,
-	    output: function output(resp) {
-	      return resp.rows.length > 0;
-	    }
-	  });
-	};
-
-	SchemaCompiler_PG.prototype.qualifiedTableName = function (tableName) {
-	  var name = this.schema ? this.schema + '.' + tableName : tableName;
-	  return this.formatter.wrap(name);
-	};
-
-	// Compile a rename table command.
-	SchemaCompiler_PG.prototype.renameTable = function (from, to) {
-	  this.pushQuery('alter table ' + this.qualifiedTableName(from) + ' rename to ' + this.qualifiedTableName(to));
-	};
-
-	SchemaCompiler_PG.prototype.createSchema = function (schemaName) {
-	  this.pushQuery('create schema ' + this.formatter.wrap(schemaName));
-	};
-
-	SchemaCompiler_PG.prototype.createSchemaIfNotExists = function (schemaName) {
-	  this.pushQuery('create schema if not exists ' + this.formatter.wrap(schemaName));
-	};
-
-	SchemaCompiler_PG.prototype.dropSchema = function (schemaName) {
-	  this.pushQuery('drop schema ' + this.formatter.wrap(schemaName));
-	};
-
-	SchemaCompiler_PG.prototype.dropSchemaIfExists = function (schemaName) {
-	  this.pushQuery('drop schema if exists ' + this.formatter.wrap(schemaName));
-	};
-
-	SchemaCompiler_PG.prototype.dropExtension = function (extensionName) {
-	  this.pushQuery('drop extension ' + this.formatter.wrap(extensionName));
-	};
-
-	SchemaCompiler_PG.prototype.dropExtensionIfExists = function (extensionName) {
-	  this.pushQuery('drop extension if exists ' + this.formatter.wrap(extensionName));
-	};
-
-	SchemaCompiler_PG.prototype.createExtension = function (extensionName) {
-	  this.pushQuery('create extension ' + this.formatter.wrap(extensionName));
-	};
-
-	SchemaCompiler_PG.prototype.createExtensionIfNotExists = function (extensionName) {
-	  this.pushQuery('create extension if not exists ' + this.formatter.wrap(extensionName));
-	};
-
-	module.exports = SchemaCompiler_PG;
-
-/***/ },
 /* 78 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _lodash = __webpack_require__(1);
-
-	var Transaction = __webpack_require__(16);
-	var inherits = __webpack_require__(52);
-	var debug = __webpack_require__(53)('knex:tx');
-	var helpers = __webpack_require__(3);
-
-	function Transaction_MySQL() {
-	  Transaction.apply(this, arguments);
-	}
-	inherits(Transaction_MySQL, Transaction);
-
-	(0, _lodash.assign)(Transaction_MySQL.prototype, {
-
-	  query: function query(conn, sql, status, value) {
-	    var t = this;
-	    var q = this.trxClient.query(conn, sql)['catch'](function (err) {
-	      return err.errno === 1305;
-	    }, function () {
-	      helpers.warn('Transaction was implicitly committed, do not mix transactions and DDL with MySQL (#805)');
-	    })['catch'](function (err) {
-	      status = 2;
-	      value = err;
-	      t._completed = true;
-	      debug('%s error running transaction query', t.txid);
-	    }).tap(function () {
-	      if (status === 1) t._resolver(value);
-	      if (status === 2) t._rejecter(value);
-	    });
-	    if (status === 1 || status === 2) {
-	      t._completed = true;
-	    }
-	    return q;
-	  }
-
-	});
-
-	module.exports = Transaction_MySQL;
-
-/***/ },
-/* 79 */
-/***/ function(module, exports, __webpack_require__) {
-
-	
-	// MySQL Query Compiler
-	// ------
-	'use strict';
-
-	var _lodash = __webpack_require__(1);
-
-	var inherits = __webpack_require__(52);
-	var QueryCompiler = __webpack_require__(18);
-
-	function QueryCompiler_MySQL(client, builder) {
-	  QueryCompiler.call(this, client, builder);
-	}
-	inherits(QueryCompiler_MySQL, QueryCompiler);
-
-	(0, _lodash.assign)(QueryCompiler_MySQL.prototype, {
-
-	  _emptyInsertValue: '() values ()',
-
-	  // Update method, including joins, wheres, order & limits.
-	  update: function update() {
-	    var join = this.join();
-	    var updates = this._prepUpdate(this.single.update);
-	    var where = this.where();
-	    var order = this.order();
-	    var limit = this.limit();
-	    return 'update ' + this.tableName + (join ? ' ' + join : '') + ' set ' + updates.join(', ') + (where ? ' ' + where : '') + (order ? ' ' + order : '') + (limit ? ' ' + limit : '');
-	  },
-
-	  forUpdate: function forUpdate() {
-	    return 'for update';
-	  },
-
-	  forShare: function forShare() {
-	    return 'lock in share mode';
-	  },
-
-	  // Compiles a `columnInfo` query.
-	  columnInfo: function columnInfo() {
-	    var column = this.single.columnInfo;
-	    return {
-	      sql: 'select * from information_schema.columns where table_name = ? and table_schema = ?',
-	      bindings: [this.single.table, this.client.database()],
-	      output: function output(resp) {
-	        var out = resp.reduce(function (columns, val) {
-	          columns[val.COLUMN_NAME] = {
-	            defaultValue: val.COLUMN_DEFAULT,
-	            type: val.DATA_TYPE,
-	            maxLength: val.CHARACTER_MAXIMUM_LENGTH,
-	            nullable: val.IS_NULLABLE === 'YES'
-	          };
-	          return columns;
-	        }, {});
-	        return column && out[column] || out;
-	      }
-	    };
-	  },
-
-	  limit: function limit() {
-	    var noLimit = !this.single.limit && this.single.limit !== 0;
-	    if (noLimit && !this.single.offset) return '';
-
-	    // Workaround for offset only, see http://stackoverflow.com/questions/255517/mysql-offset-infinite-rows
-	    return 'limit ' + (this.single.offset && noLimit ? '18446744073709551615' : this.formatter.parameter(this.single.limit));
-	  }
-
-	});
-
-	// Set the QueryBuilder & QueryCompiler on the client object,
-	// in case anyone wants to modify things to suit their own purposes.
-	module.exports = QueryCompiler_MySQL;
-
-/***/ },
-/* 80 */
-/***/ function(module, exports, __webpack_require__) {
-
-	
-	// MySQL Schema Compiler
-	// -------
-	'use strict';
-
-	var _lodash = __webpack_require__(1);
-
-	var inherits = __webpack_require__(52);
-	var SchemaCompiler = __webpack_require__(20);
-
-	function SchemaCompiler_MySQL(client, builder) {
-	  SchemaCompiler.call(this, client, builder);
-	}
-	inherits(SchemaCompiler_MySQL, SchemaCompiler);
-
-	(0, _lodash.assign)(SchemaCompiler_MySQL.prototype, {
-
-	  // Rename a table on the schema.
-	  renameTable: function renameTable(tableName, to) {
-	    this.pushQuery('rename table ' + this.formatter.wrap(tableName) + ' to ' + this.formatter.wrap(to));
-	  },
-
-	  // Check whether a table exists on the query.
-	  hasTable: function hasTable(tableName) {
-	    this.pushQuery({
-	      sql: 'show tables like ' + this.formatter.parameter(tableName),
-	      output: function output(resp) {
-	        return resp.length > 0;
-	      }
-	    });
-	  },
-
-	  // Check whether a column exists on the schema.
-	  hasColumn: function hasColumn(tableName, column) {
-	    this.pushQuery({
-	      sql: 'show columns from ' + this.formatter.wrap(tableName) + ' like ' + this.formatter.parameter(column),
-	      output: function output(resp) {
-	        return resp.length > 0;
-	      }
-	    });
-	  }
-
-	});
-
-	module.exports = SchemaCompiler_MySQL;
-
-/***/ },
-/* 81 */
-/***/ function(module, exports, __webpack_require__) {
-
-	
-	// MySQL Table Builder & Compiler
-	// -------
-	'use strict';
-
-	var _lodash = __webpack_require__(1);
-
-	// Table Compiler
-	// ------
-
-	var inherits = __webpack_require__(52);
-	var TableCompiler = __webpack_require__(22);
-	var helpers = __webpack_require__(3);
-	var Promise = __webpack_require__(9);
-
-	function TableCompiler_MySQL() {
-	  TableCompiler.apply(this, arguments);
-	}
-	inherits(TableCompiler_MySQL, TableCompiler);
-
-	(0, _lodash.assign)(TableCompiler_MySQL.prototype, {
-
-	  createQuery: function createQuery(columns, ifNot) {
-	    var createStatement = ifNot ? 'create table if not exists ' : 'create table ';
-	    var client = this.client,
-	        conn = {},
-	        sql = createStatement + this.tableName() + ' (' + columns.sql.join(', ') + ')';
-
-	    // Check if the connection settings are set.
-	    if (client.connectionSettings) {
-	      conn = client.connectionSettings;
-	    }
-
-	    var charset = this.single.charset || conn.charset || '';
-	    var collation = this.single.collate || conn.collate || '';
-	    var engine = this.single.engine || '';
-
-	    // var conn = builder.client.connectionSettings;
-	    if (charset) sql += ' default character set ' + charset;
-	    if (collation) sql += ' collate ' + collation;
-	    if (engine) sql += ' engine = ' + engine;
-
-	    if (this.single.comment) {
-	      var comment = this.single.comment || '';
-	      if (comment.length > 60) helpers.warn('The max length for a table comment is 60 characters');
-	      sql += " comment = '" + comment + "'";
-	    }
-
-	    this.pushQuery(sql);
-	  },
-
-	  addColumnsPrefix: 'add ',
-
-	  dropColumnPrefix: 'drop ',
-
-	  // Compiles the comment on the table.
-	  comment: function comment(_comment) {
-	    this.pushQuery('alter table ' + this.tableName() + " comment = '" + _comment + "'");
-	  },
-
-	  changeType: function changeType() {
-	    // alter table + table + ' modify ' + wrapped + '// type';
-	  },
-
-	  // Renames a column on the table.
-	  renameColumn: function renameColumn(from, to) {
-	    var compiler = this;
-	    var table = this.tableName();
-	    var wrapped = this.formatter.wrap(from) + ' ' + this.formatter.wrap(to);
-
-	    this.pushQuery({
-	      sql: 'show fields from ' + table + ' where field = ' + this.formatter.parameter(from),
-	      output: function output(resp) {
-	        var column = resp[0];
-	        var runner = this;
-	        return compiler.getFKRefs(runner).get(0).then(function (refs) {
-	          return Promise['try'](function () {
-	            if (!refs.length) {
-	              return;
-	            }
-	            return compiler.dropFKRefs(runner, refs);
-	          }).then(function () {
-	            var sql = 'alter table ' + table + ' change ' + wrapped + ' ' + column.Type;
-
-	            if (String(column.Null).toUpperCase() !== 'YES') {
-	              sql += ' NOT NULL';
-	            }
-	            if (column.Default !== void 0 && column.Default !== null) {
-	              sql += ' DEFAULT \'' + column.Default + '\'';
-	            }
-
-	            return runner.query({
-	              sql: sql
-	            });
-	          }).then(function () {
-	            if (!refs.length) {
-	              return;
-	            }
-	            return compiler.createFKRefs(runner, refs.map(function (ref) {
-	              if (ref.REFERENCED_COLUMN_NAME === from) {
-	                ref.REFERENCED_COLUMN_NAME = to;
-	              }
-	              if (ref.COLUMN_NAME === from) {
-	                ref.COLUMN_NAME = to;
-	              }
-	              return ref;
-	            }));
-	          });
-	        });
-	      }
-	    });
-	  },
-
-	  getFKRefs: function getFKRefs(runner) {
-	    var formatter = this.client.formatter();
-	    var sql = 'SELECT KCU.CONSTRAINT_NAME, KCU.TABLE_NAME, KCU.COLUMN_NAME, ' + '       KCU.REFERENCED_TABLE_NAME, KCU.REFERENCED_COLUMN_NAME, ' + '       RC.UPDATE_RULE, RC.DELETE_RULE ' + 'FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE AS KCU ' + 'JOIN INFORMATION_SCHEMA.REFERENTIAL_CONSTRAINTS AS RC ' + '       USING(CONSTRAINT_NAME)' + 'WHERE KCU.REFERENCED_TABLE_NAME = ' + formatter.parameter(this.tableNameRaw) + ' ' + '  AND KCU.CONSTRAINT_SCHEMA = ' + formatter.parameter(this.client.database()) + ' ' + '  AND RC.CONSTRAINT_SCHEMA = ' + formatter.parameter(this.client.database());
-
-	    return runner.query({
-	      sql: sql,
-	      bindings: formatter.bindings
-	    });
-	  },
-
-	  dropFKRefs: function dropFKRefs(runner, refs) {
-	    var formatter = this.client.formatter();
-
-	    return Promise.all(refs.map(function (ref) {
-	      var constraintName = formatter.wrap(ref.CONSTRAINT_NAME);
-	      var tableName = formatter.wrap(ref.TABLE_NAME);
-	      return runner.query({
-	        sql: 'alter table ' + tableName + ' drop foreign key ' + constraintName
-	      });
-	    }));
-	  },
-	  createFKRefs: function createFKRefs(runner, refs) {
-	    var formatter = this.client.formatter();
-
-	    return Promise.all(refs.map(function (ref) {
-	      var tableName = formatter.wrap(ref.TABLE_NAME);
-	      var keyName = formatter.wrap(ref.CONSTRAINT_NAME);
-	      var column = formatter.columnize(ref.COLUMN_NAME);
-	      var references = formatter.columnize(ref.REFERENCED_COLUMN_NAME);
-	      var inTable = formatter.wrap(ref.REFERENCED_TABLE_NAME);
-	      var onUpdate = ' ON UPDATE ' + ref.UPDATE_RULE;
-	      var onDelete = ' ON DELETE ' + ref.DELETE_RULE;
-
-	      return runner.query({
-	        sql: 'alter table ' + tableName + ' add constraint ' + keyName + ' ' + 'foreign key (' + column + ') references ' + inTable + ' (' + references + ')' + onUpdate + onDelete
-	      });
-	    }));
-	  },
-	  index: function index(columns, indexName) {
-	    indexName = indexName ? this.formatter.wrap(indexName) : this._indexCommand('index', this.tableNameRaw, columns);
-	    this.pushQuery('alter table ' + this.tableName() + " add index " + indexName + "(" + this.formatter.columnize(columns) + ")");
-	  },
-
-	  primary: function primary(columns, indexName) {
-	    indexName = indexName ? this.formatter.wrap(indexName) : this._indexCommand('primary', this.tableNameRaw, columns);
-	    this.pushQuery('alter table ' + this.tableName() + " add primary key " + indexName + "(" + this.formatter.columnize(columns) + ")");
-	  },
-
-	  unique: function unique(columns, indexName) {
-	    indexName = indexName ? this.formatter.wrap(indexName) : this._indexCommand('unique', this.tableNameRaw, columns);
-	    this.pushQuery('alter table ' + this.tableName() + " add unique " + indexName + "(" + this.formatter.columnize(columns) + ")");
-	  },
-
-	  // Compile a drop index command.
-	  dropIndex: function dropIndex(columns, indexName) {
-	    indexName = indexName ? this.formatter.wrap(indexName) : this._indexCommand('index', this.tableNameRaw, columns);
-	    this.pushQuery('alter table ' + this.tableName() + ' drop index ' + indexName);
-	  },
-
-	  // Compile a drop foreign key command.
-	  dropForeign: function dropForeign(columns, indexName) {
-	    indexName = indexName ? this.formatter.wrap(indexName) : this._indexCommand('foreign', this.tableNameRaw, columns);
-	    this.pushQuery('alter table ' + this.tableName() + ' drop foreign key ' + indexName);
-	  },
-
-	  // Compile a drop primary key command.
-	  dropPrimary: function dropPrimary() {
-	    this.pushQuery('alter table ' + this.tableName() + ' drop primary key');
-	  },
-
-	  // Compile a drop unique key command.
-	  dropUnique: function dropUnique(column, indexName) {
-	    indexName = indexName ? this.formatter.wrap(indexName) : this._indexCommand('unique', this.tableNameRaw, column);
-	    this.pushQuery('alter table ' + this.tableName() + ' drop index ' + indexName);
-	  }
-
-	});
-
-	module.exports = TableCompiler_MySQL;
-
-/***/ },
-/* 82 */
-/***/ function(module, exports, __webpack_require__) {
-
-	
-	// MySQL Column Compiler
-	// -------
-	'use strict';
-
-	var _lodash = __webpack_require__(1);
-
-	var inherits = __webpack_require__(52);
-	var ColumnCompiler = __webpack_require__(24);
-	var helpers = __webpack_require__(3);
-
-	function ColumnCompiler_MySQL() {
-	  ColumnCompiler.apply(this, arguments);
-	  this.modifiers = ['unsigned', 'nullable', 'defaultTo', 'first', 'after', 'comment', 'collate'];
-	}
-	inherits(ColumnCompiler_MySQL, ColumnCompiler);
-
-	// Types
-	// ------
-
-	(0, _lodash.assign)(ColumnCompiler_MySQL.prototype, {
-
-	  increments: 'int unsigned not null auto_increment primary key',
-
-	  bigincrements: 'bigint unsigned not null auto_increment primary key',
-
-	  bigint: 'bigint',
-
-	  double: function double(precision, scale) {
-	    if (!precision) return 'double';
-	    return 'double(' + this._num(precision, 8) + ', ' + this._num(scale, 2) + ')';
-	  },
-
-	  integer: function integer(length) {
-	    length = length ? '(' + this._num(length, 11) + ')' : '';
-	    return 'int' + length;
-	  },
-
-	  mediumint: 'mediumint',
-
-	  smallint: 'smallint',
-
-	  tinyint: function tinyint(length) {
-	    length = length ? '(' + this._num(length, 1) + ')' : '';
-	    return 'tinyint' + length;
-	  },
-
-	  text: function text(column) {
-	    switch (column) {
-	      case 'medium':
-	      case 'mediumtext':
-	        return 'mediumtext';
-	      case 'long':
-	      case 'longtext':
-	        return 'longtext';
-	      default:
-	        return 'text';
-	    }
-	  },
-
-	  mediumtext: function mediumtext() {
-	    return this.text('medium');
-	  },
-
-	  longtext: function longtext() {
-	    return this.text('long');
-	  },
-
-	  enu: function enu(allowed) {
-	    return "enum('" + allowed.join("', '") + "')";
-	  },
-
-	  datetime: 'datetime',
-
-	  timestamp: 'timestamp',
-
-	  bit: function bit(length) {
-	    return length ? 'bit(' + this._num(length) + ')' : 'bit';
-	  },
-
-	  binary: function binary(length) {
-	    return length ? 'varbinary(' + this._num(length) + ')' : 'blob';
-	  },
-
-	  // Modifiers
-	  // ------
-
-	  defaultTo: function defaultTo(value) {
-	    /*jshint unused: false*/
-	    var defaultVal = ColumnCompiler_MySQL.super_.prototype.defaultTo.apply(this, arguments);
-	    if (this.type !== 'blob' && this.type.indexOf('text') === -1) {
-	      return defaultVal;
-	    }
-	    return '';
-	  },
-
-	  unsigned: function unsigned() {
-	    return 'unsigned';
-	  },
-
-	  first: function first() {
-	    return 'first';
-	  },
-
-	  after: function after(column) {
-	    return 'after ' + this.formatter.wrap(column);
-	  },
-
-	  comment: function comment(_comment) {
-	    if (_comment && _comment.length > 255) {
-	      helpers.warn('Your comment is longer than the max comment length for MySQL');
-	    }
-	    return _comment && "comment '" + _comment + "'";
-	  },
-
-	  collate: function collate(collation) {
-	    return collation && "collate '" + collation + "'";
-	  }
-
-	});
-
-	module.exports = ColumnCompiler_MySQL;
-
-/***/ },
-/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict';
 
 	var _ = __webpack_require__(1);
 	var inherits = __webpack_require__(52);
-	var Oracle_Compiler = __webpack_require__(66);
-	var ReturningHelper = __webpack_require__(86).ReturningHelper;
-	var BlobHelper = __webpack_require__(86).BlobHelper;
+	var Oracle_Compiler = __webpack_require__(71);
+	var ReturningHelper = __webpack_require__(81).ReturningHelper;
+	var BlobHelper = __webpack_require__(81).BlobHelper;
 
 	function Oracledb_Compiler(client, builder) {
 	  Oracle_Compiler.call(this, client, builder);
@@ -10100,7 +9614,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(95).Buffer))
 
 /***/ },
-/* 84 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10108,7 +9622,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _lodash = __webpack_require__(1);
 
 	var inherits = __webpack_require__(52);
-	var ColumnCompiler_Oracle = __webpack_require__(69);
+	var ColumnCompiler_Oracle = __webpack_require__(74);
 
 	function ColumnCompiler_Oracledb() {
 	  ColumnCompiler_Oracle.apply(this, arguments);
@@ -10133,7 +9647,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = ColumnCompiler_Oracledb;
 
 /***/ },
-/* 85 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10141,8 +9655,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _lodash = __webpack_require__(1);
 
 	var inherits = __webpack_require__(52);
-	var Oracle_Formatter = __webpack_require__(64);
-	var BlobHelper = __webpack_require__(86).BlobHelper;
+	var Oracle_Formatter = __webpack_require__(69);
+	var BlobHelper = __webpack_require__(81).BlobHelper;
 
 	function Oracledb_Formatter(client) {
 	  Oracle_Formatter.call(this, client);
@@ -10167,12 +9681,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Oracledb_Formatter;
 
 /***/ },
-/* 86 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var Utils = __webpack_require__(72);
+	var Utils = __webpack_require__(77);
 
 	function BlobHelper(columnName, value) {
 	  this.columnName = columnName;
@@ -10188,7 +9702,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Utils;
 
 /***/ },
-/* 87 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10249,7 +9763,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Oracle_Transaction;
 
 /***/ },
-/* 88 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {
@@ -10306,6 +9820,492 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	module.exports = OracleQueryStream;
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
+
+/***/ },
+/* 84 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict';
+
+	function dateToString(date) {
+	  function pad(number, digits) {
+	    number = number.toString();
+	    while (number.length < digits) {
+	      number = "0" + number;
+	    }
+	    return number;
+	  }
+
+	  var offset = -date.getTimezoneOffset();
+	  var ret = pad(date.getFullYear(), 4) + '-' + pad(date.getMonth() + 1, 2) + '-' + pad(date.getDate(), 2) + 'T' + pad(date.getHours(), 2) + ':' + pad(date.getMinutes(), 2) + ':' + pad(date.getSeconds(), 2) + '.' + pad(date.getMilliseconds(), 3);
+
+	  if (offset < 0) {
+	    ret += "-";
+	    offset *= -1;
+	  } else {
+	    ret += "+";
+	  }
+
+	  return ret + pad(Math.floor(offset / 60), 2) + ":" + pad(offset % 60, 2);
+	}
+
+	var prepareObject;
+	var arrayString;
+
+	// converts values from javascript types
+	// to their 'raw' counterparts for use as a postgres parameter
+	// note: you can override this function to provide your own conversion mechanism
+	// for complex types, etc...
+	var prepareValue = function prepareValue(val, seen, valueForUndefined) {
+	  if (val instanceof Buffer) {
+	    return val;
+	  }
+	  if (val instanceof Date) {
+	    return dateToString(val);
+	  }
+	  if (Array.isArray(val)) {
+	    return arrayString(val);
+	  }
+	  if (val === null) {
+	    return null;
+	  }
+	  if (val === undefined) {
+	    return valueForUndefined;
+	  }
+	  if (typeof val === 'object') {
+	    return prepareObject(val, seen);
+	  }
+	  return val.toString();
+	};
+
+	prepareObject = function prepareObject(val, seen) {
+	  if (val && typeof val.toPostgres === 'function') {
+	    seen = seen || [];
+	    if (seen.indexOf(val) !== -1) {
+	      throw new Error('circular reference detected while preparing "' + val + '" for query');
+	    }
+	    seen.push(val);
+
+	    return prepareValue(val.toPostgres(prepareValue), seen);
+	  }
+	  return JSON.stringify(val);
+	};
+
+	// convert a JS array to a postgres array literal
+	// uses comma separator so won't work for types like box that use
+	// a different array separator.
+	arrayString = function arrayString(val) {
+	  return '{' + val.map(function (elem) {
+	    if (elem === null || elem === undefined) {
+	      return 'NULL';
+	    }
+	    if (Array.isArray(elem)) {
+	      return arrayString(elem);
+	    }
+	    return JSON.stringify(prepareValue(elem));
+	  }).join(',') + '}';
+	};
+
+	function normalizeQueryConfig(config, values, callback) {
+	  //can take in strings or config objects
+	  config = typeof config === 'string' ? { text: config } : config;
+	  if (values) {
+	    if (typeof values === 'function') {
+	      config.callback = values;
+	    } else {
+	      config.values = values;
+	    }
+	  }
+	  if (callback) {
+	    config.callback = callback;
+	  }
+	  return config;
+	}
+
+	module.exports = {
+	  prepareValue: prepareValue,
+	  normalizeQueryConfig: normalizeQueryConfig
+	};
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(95).Buffer))
+
+/***/ },
+/* 85 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	// PostgreSQL Query Builder & Compiler
+	// ------
+	'use strict';
+
+	var _lodash = __webpack_require__(1);
+
+	var inherits = __webpack_require__(52);
+
+	var QueryCompiler = __webpack_require__(18);
+
+	function QueryCompiler_PG(client, builder) {
+	  QueryCompiler.call(this, client, builder);
+	}
+	inherits(QueryCompiler_PG, QueryCompiler);
+
+	(0, _lodash.assign)(QueryCompiler_PG.prototype, {
+
+	  // Compiles a truncate query.
+	  truncate: function truncate() {
+	    return 'truncate ' + this.tableName + ' restart identity';
+	  },
+
+	  // is used if the an array with multiple empty values supplied
+	  _defaultInsertValue: 'default',
+
+	  // Compiles an `insert` query, allowing for multiple
+	  // inserts using a single query statement.
+	  insert: function insert() {
+	    var sql = QueryCompiler.prototype.insert.call(this);
+	    if (sql === '') return sql;
+	    var returning = this.single.returning;
+	    return {
+	      sql: sql + this._returning(returning),
+	      returning: returning
+	    };
+	  },
+
+	  // Compiles an `update` query, allowing for a return value.
+	  update: function update() {
+	    var updateData = this._prepUpdate(this.single.update);
+	    var wheres = this.where();
+	    var returning = this.single.returning;
+	    return {
+	      sql: 'update ' + this.tableName + ' set ' + updateData.join(', ') + (wheres ? ' ' + wheres : '') + this._returning(returning),
+	      returning: returning
+	    };
+	  },
+
+	  // Compiles an `update` query, allowing for a return value.
+	  del: function del() {
+	    var sql = QueryCompiler.prototype.del.apply(this, arguments);
+	    var returning = this.single.returning;
+	    return {
+	      sql: sql + this._returning(returning),
+	      returning: returning
+	    };
+	  },
+
+	  _returning: function _returning(value) {
+	    return value ? ' returning ' + this.formatter.columnize(value) : '';
+	  },
+
+	  forUpdate: function forUpdate() {
+	    return 'for update';
+	  },
+
+	  forShare: function forShare() {
+	    return 'for share';
+	  },
+
+	  // Compiles a columnInfo query
+	  columnInfo: function columnInfo() {
+	    var column = this.single.columnInfo;
+
+	    var sql = 'select * from information_schema.columns where table_name = ? and table_catalog = ?';
+	    var bindings = [this.single.table, this.client.database()];
+
+	    if (this.single.schema) {
+	      sql += ' and table_schema = ?';
+	      bindings.push(this.single.schema);
+	    } else {
+	      sql += ' and table_schema = current_schema';
+	    }
+
+	    return {
+	      sql: sql,
+	      bindings: bindings,
+	      output: function output(resp) {
+	        var out = (0, _lodash.reduce)(resp.rows, function (columns, val) {
+	          columns[val.column_name] = {
+	            type: val.data_type,
+	            maxLength: val.character_maximum_length,
+	            nullable: val.is_nullable === 'YES',
+	            defaultValue: val.column_default
+	          };
+	          return columns;
+	        }, {});
+	        return column && out[column] || out;
+	      }
+	    };
+	  }
+
+	});
+
+	module.exports = QueryCompiler_PG;
+
+/***/ },
+/* 86 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	// PostgreSQL Column Compiler
+	// -------
+
+	'use strict';
+
+	var _lodash = __webpack_require__(1);
+
+	var inherits = __webpack_require__(52);
+	var ColumnCompiler = __webpack_require__(24);
+	var helpers = __webpack_require__(3);
+
+	function ColumnCompiler_PG() {
+	  ColumnCompiler.apply(this, arguments);
+	  this.modifiers = ['nullable', 'defaultTo', 'comment'];
+	}
+	inherits(ColumnCompiler_PG, ColumnCompiler);
+
+	(0, _lodash.assign)(ColumnCompiler_PG.prototype, {
+
+	  // Types
+	  // ------
+	  bigincrements: 'bigserial primary key',
+	  bigint: 'bigint',
+	  binary: 'bytea',
+
+	  bit: function bit(column) {
+	    return column.length !== false ? 'bit(' + column.length + ')' : 'bit';
+	  },
+
+	  bool: 'boolean',
+
+	  // Create the column definition for an enum type.
+	  // Using method "2" here: http://stackoverflow.com/a/10984951/525714
+	  enu: function enu(allowed) {
+	    return 'text check (' + this.formatter.wrap(this.args[0]) + " in ('" + allowed.join("', '") + "'))";
+	  },
+
+	  double: 'double precision',
+	  floating: 'real',
+	  increments: 'serial primary key',
+	  json: function json(jsonb) {
+	    if (jsonb) helpers.deprecate('json(true)', 'jsonb()');
+	    return jsonColumn(this.client, jsonb);
+	  },
+	  jsonb: function jsonb() {
+	    return jsonColumn(this.client, true);
+	  },
+	  smallint: 'smallint',
+	  tinyint: 'smallint',
+	  datetime: function datetime(without) {
+	    return without ? 'timestamp' : 'timestamptz';
+	  },
+	  timestamp: function timestamp(without) {
+	    return without ? 'timestamp' : 'timestamptz';
+	  },
+	  uuid: 'uuid',
+
+	  // Modifiers:
+	  // ------
+	  comment: function comment(_comment) {
+	    this.pushAdditional(function () {
+	      this.pushQuery('comment on column ' + this.tableCompiler.tableName() + '.' + this.formatter.wrap(this.args[0]) + " is " + (_comment ? "'" + _comment + "'" : 'NULL'));
+	    }, _comment);
+	  }
+
+	});
+
+	function jsonColumn(client, jsonb) {
+	  if (!client.version || parseFloat(client.version) >= 9.2) return jsonb ? 'jsonb' : 'json';
+	  return 'text';
+	}
+
+	module.exports = ColumnCompiler_PG;
+
+/***/ },
+/* 87 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// PostgreSQL Table Builder & Compiler
+	// -------
+
+	'use strict';
+
+	var _lodash = __webpack_require__(1);
+
+	var inherits = __webpack_require__(52);
+	var TableCompiler = __webpack_require__(22);
+
+	function TableCompiler_PG() {
+	  TableCompiler.apply(this, arguments);
+	}
+	inherits(TableCompiler_PG, TableCompiler);
+
+	// Compile a rename column command.
+	TableCompiler_PG.prototype.renameColumn = function (from, to) {
+	  return this.pushQuery({
+	    sql: 'alter table ' + this.tableName() + ' rename ' + this.formatter.wrap(from) + ' to ' + this.formatter.wrap(to)
+	  });
+	};
+
+	TableCompiler_PG.prototype.compileAdd = function (builder) {
+	  var table = this.formatter.wrap(builder);
+	  var columns = this.prefixArray('add column', this.getColumns(builder));
+	  return this.pushQuery({
+	    sql: 'alter table ' + table + ' ' + columns.join(', ')
+	  });
+	};
+
+	// Adds the "create" query to the query sequence.
+	TableCompiler_PG.prototype.createQuery = function (columns, ifNot) {
+	  var createStatement = ifNot ? 'create table if not exists ' : 'create table ';
+	  var sql = createStatement + this.tableName() + ' (' + columns.sql.join(', ') + ')';
+	  if (this.single.inherits) sql += ' inherits (' + this.formatter.wrap(this.single.inherits) + ')';
+	  this.pushQuery({
+	    sql: sql,
+	    bindings: columns.bindings
+	  });
+	  var hasComment = (0, _lodash.has)(this.single, 'comment');
+	  if (hasComment) this.comment(this.single.comment);
+	};
+
+	// Compiles the comment on the table.
+	TableCompiler_PG.prototype.comment = function (comment) {
+	  /*jshint unused: false*/
+	  this.pushQuery('comment on table ' + this.tableName() + ' is ' + "'" + (this.single.comment || '') + "'");
+	};
+
+	// Indexes:
+	// -------
+
+	TableCompiler_PG.prototype.primary = function (columns) {
+	  this.pushQuery('alter table ' + this.tableName() + " add primary key (" + this.formatter.columnize(columns) + ")");
+	};
+	TableCompiler_PG.prototype.unique = function (columns, indexName) {
+	  indexName = indexName ? this.formatter.wrap(indexName) : this._indexCommand('unique', this.tableNameRaw, columns);
+	  this.pushQuery('alter table ' + this.tableName() + ' add constraint ' + indexName + ' unique (' + this.formatter.columnize(columns) + ')');
+	};
+	TableCompiler_PG.prototype.index = function (columns, indexName, indexType) {
+	  indexName = indexName ? this.formatter.wrap(indexName) : this._indexCommand('index', this.tableNameRaw, columns);
+	  this.pushQuery('create index ' + indexName + ' on ' + this.tableName() + (indexType && ' using ' + indexType || '') + ' (' + this.formatter.columnize(columns) + ')');
+	};
+	TableCompiler_PG.prototype.dropPrimary = function () {
+	  var constraintName = this.formatter.wrap(this.tableNameRaw + '_pkey');
+	  this.pushQuery('alter table ' + this.tableName() + " drop constraint " + constraintName);
+	};
+	TableCompiler_PG.prototype.dropIndex = function (columns, indexName) {
+	  indexName = indexName ? this.formatter.wrap(indexName) : this._indexCommand('index', this.tableNameRaw, columns);
+	  this.pushQuery('drop index ' + indexName);
+	};
+	TableCompiler_PG.prototype.dropUnique = function (columns, indexName) {
+	  indexName = indexName ? this.formatter.wrap(indexName) : this._indexCommand('unique', this.tableNameRaw, columns);
+	  this.pushQuery('alter table ' + this.tableName() + ' drop constraint ' + indexName);
+	};
+	TableCompiler_PG.prototype.dropForeign = function (columns, indexName) {
+	  indexName = indexName ? this.formatter.wrap(indexName) : this._indexCommand('foreign', this.tableNameRaw, columns);
+	  this.pushQuery('alter table ' + this.tableName() + ' drop constraint ' + indexName);
+	};
+
+	module.exports = TableCompiler_PG;
+
+/***/ },
+/* 88 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// PostgreSQL Schema Compiler
+	// -------
+
+	'use strict';
+
+	var inherits = __webpack_require__(52);
+	var SchemaCompiler = __webpack_require__(20);
+
+	function SchemaCompiler_PG() {
+	  SchemaCompiler.apply(this, arguments);
+	}
+	inherits(SchemaCompiler_PG, SchemaCompiler);
+
+	// Check whether the current table
+	SchemaCompiler_PG.prototype.hasTable = function (tableName) {
+	  var sql = 'select * from information_schema.tables where table_name = ?';
+	  var bindings = [tableName];
+
+	  if (this.schema) {
+	    sql += ' and table_schema = ?';
+	    bindings.push(this.schema);
+	  } else {
+	    sql += ' and table_schema = current_schema';
+	  }
+
+	  this.pushQuery({
+	    sql: sql,
+	    bindings: bindings,
+	    output: function output(resp) {
+	      return resp.rows.length > 0;
+	    }
+	  });
+	};
+
+	// Compile the query to determine if a column exists in a table.
+	SchemaCompiler_PG.prototype.hasColumn = function (tableName, columnName) {
+	  var sql = 'select * from information_schema.columns where table_name = ? and column_name = ?';
+	  var bindings = [tableName, columnName];
+
+	  if (this.schema) {
+	    sql += ' and table_schema = ?';
+	    bindings.push(this.schema);
+	  } else {
+	    sql += ' and table_schema = current_schema';
+	  }
+
+	  this.pushQuery({
+	    sql: sql,
+	    bindings: bindings,
+	    output: function output(resp) {
+	      return resp.rows.length > 0;
+	    }
+	  });
+	};
+
+	SchemaCompiler_PG.prototype.qualifiedTableName = function (tableName) {
+	  var name = this.schema ? this.schema + '.' + tableName : tableName;
+	  return this.formatter.wrap(name);
+	};
+
+	// Compile a rename table command.
+	SchemaCompiler_PG.prototype.renameTable = function (from, to) {
+	  this.pushQuery('alter table ' + this.qualifiedTableName(from) + ' rename to ' + this.qualifiedTableName(to));
+	};
+
+	SchemaCompiler_PG.prototype.createSchema = function (schemaName) {
+	  this.pushQuery('create schema ' + this.formatter.wrap(schemaName));
+	};
+
+	SchemaCompiler_PG.prototype.createSchemaIfNotExists = function (schemaName) {
+	  this.pushQuery('create schema if not exists ' + this.formatter.wrap(schemaName));
+	};
+
+	SchemaCompiler_PG.prototype.dropSchema = function (schemaName) {
+	  this.pushQuery('drop schema ' + this.formatter.wrap(schemaName));
+	};
+
+	SchemaCompiler_PG.prototype.dropSchemaIfExists = function (schemaName) {
+	  this.pushQuery('drop schema if exists ' + this.formatter.wrap(schemaName));
+	};
+
+	SchemaCompiler_PG.prototype.dropExtension = function (extensionName) {
+	  this.pushQuery('drop extension ' + this.formatter.wrap(extensionName));
+	};
+
+	SchemaCompiler_PG.prototype.dropExtensionIfExists = function (extensionName) {
+	  this.pushQuery('drop extension if exists ' + this.formatter.wrap(extensionName));
+	};
+
+	SchemaCompiler_PG.prototype.createExtension = function (extensionName) {
+	  this.pushQuery('create extension ' + this.formatter.wrap(extensionName));
+	};
+
+	SchemaCompiler_PG.prototype.createExtensionIfNotExists = function (extensionName) {
+	  this.pushQuery('create extension if not exists ' + this.formatter.wrap(extensionName));
+	};
+
+	module.exports = SchemaCompiler_PG;
 
 /***/ },
 /* 89 */
@@ -11371,7 +11371,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict'
 
 	var base64 = __webpack_require__(121)
-	var ieee754 = __webpack_require__(117)
+	var ieee754 = __webpack_require__(119)
 	var isArray = __webpack_require__(120)
 
 	exports.Buffer = Buffer
@@ -13078,7 +13078,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.disable = disable;
 	exports.enable = enable;
 	exports.enabled = enabled;
-	exports.humanize = __webpack_require__(123);
+	exports.humanize = __webpack_require__(122);
 
 	/**
 	 * The currently active debug mode names, and names to skip.
@@ -13270,8 +13270,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	exports.decode = exports.parse = __webpack_require__(118);
-	exports.encode = exports.stringify = __webpack_require__(119);
+	exports.decode = exports.parse = __webpack_require__(117);
+	exports.encode = exports.stringify = __webpack_require__(118);
 
 
 /***/ },
@@ -13293,18 +13293,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 101 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	var ansiRegex = __webpack_require__(124)();
-
-	module.exports = function (str) {
-		return typeof str === 'string' ? str.replace(ansiRegex, '') : str;
-	};
-
-
-/***/ },
-/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(module) {'use strict';
@@ -13374,6 +13362,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	});
 
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(130)(module)))
+
+/***/ },
+/* 102 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var ansiRegex = __webpack_require__(124)();
+
+	module.exports = function (str) {
+		return typeof str === 'string' ? str.replace(ansiRegex, '') : str;
+	};
+
 
 /***/ },
 /* 103 */
@@ -14122,7 +14122,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 
 	/*<replacement>*/
-	var debug = __webpack_require__(122);
+	var debug = __webpack_require__(123);
 	if (debug && debug.debuglog) {
 	  debug = debug.debuglog('stream');
 	} else {
@@ -16467,6 +16467,162 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 117 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// Copyright Joyent, Inc. and other Node contributors.
+	//
+	// Permission is hereby granted, free of charge, to any person obtaining a
+	// copy of this software and associated documentation files (the
+	// "Software"), to deal in the Software without restriction, including
+	// without limitation the rights to use, copy, modify, merge, publish,
+	// distribute, sublicense, and/or sell copies of the Software, and to permit
+	// persons to whom the Software is furnished to do so, subject to the
+	// following conditions:
+	//
+	// The above copyright notice and this permission notice shall be included
+	// in all copies or substantial portions of the Software.
+	//
+	// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+	// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+	// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+	// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+	// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+	// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+	// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+	'use strict';
+
+	// If obj.hasOwnProperty has been overridden, then calling
+	// obj.hasOwnProperty(prop) will break.
+	// See: https://github.com/joyent/node/issues/1707
+	function hasOwnProperty(obj, prop) {
+	  return Object.prototype.hasOwnProperty.call(obj, prop);
+	}
+
+	module.exports = function(qs, sep, eq, options) {
+	  sep = sep || '&';
+	  eq = eq || '=';
+	  var obj = {};
+
+	  if (typeof qs !== 'string' || qs.length === 0) {
+	    return obj;
+	  }
+
+	  var regexp = /\+/g;
+	  qs = qs.split(sep);
+
+	  var maxKeys = 1000;
+	  if (options && typeof options.maxKeys === 'number') {
+	    maxKeys = options.maxKeys;
+	  }
+
+	  var len = qs.length;
+	  // maxKeys <= 0 means that we should not limit keys count
+	  if (maxKeys > 0 && len > maxKeys) {
+	    len = maxKeys;
+	  }
+
+	  for (var i = 0; i < len; ++i) {
+	    var x = qs[i].replace(regexp, '%20'),
+	        idx = x.indexOf(eq),
+	        kstr, vstr, k, v;
+
+	    if (idx >= 0) {
+	      kstr = x.substr(0, idx);
+	      vstr = x.substr(idx + 1);
+	    } else {
+	      kstr = x;
+	      vstr = '';
+	    }
+
+	    k = decodeURIComponent(kstr);
+	    v = decodeURIComponent(vstr);
+
+	    if (!hasOwnProperty(obj, k)) {
+	      obj[k] = v;
+	    } else if (Array.isArray(obj[k])) {
+	      obj[k].push(v);
+	    } else {
+	      obj[k] = [obj[k], v];
+	    }
+	  }
+
+	  return obj;
+	};
+
+
+/***/ },
+/* 118 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// Copyright Joyent, Inc. and other Node contributors.
+	//
+	// Permission is hereby granted, free of charge, to any person obtaining a
+	// copy of this software and associated documentation files (the
+	// "Software"), to deal in the Software without restriction, including
+	// without limitation the rights to use, copy, modify, merge, publish,
+	// distribute, sublicense, and/or sell copies of the Software, and to permit
+	// persons to whom the Software is furnished to do so, subject to the
+	// following conditions:
+	//
+	// The above copyright notice and this permission notice shall be included
+	// in all copies or substantial portions of the Software.
+	//
+	// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+	// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+	// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+	// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+	// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+	// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+	// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+	'use strict';
+
+	var stringifyPrimitive = function(v) {
+	  switch (typeof v) {
+	    case 'string':
+	      return v;
+
+	    case 'boolean':
+	      return v ? 'true' : 'false';
+
+	    case 'number':
+	      return isFinite(v) ? v : '';
+
+	    default:
+	      return '';
+	  }
+	};
+
+	module.exports = function(obj, sep, eq, name) {
+	  sep = sep || '&';
+	  eq = eq || '=';
+	  if (obj === null) {
+	    obj = undefined;
+	  }
+
+	  if (typeof obj === 'object') {
+	    return Object.keys(obj).map(function(k) {
+	      var ks = encodeURIComponent(stringifyPrimitive(k)) + eq;
+	      if (Array.isArray(obj[k])) {
+	        return obj[k].map(function(v) {
+	          return ks + encodeURIComponent(stringifyPrimitive(v));
+	        }).join(sep);
+	      } else {
+	        return ks + encodeURIComponent(stringifyPrimitive(obj[k]));
+	      }
+	    }).join(sep);
+
+	  }
+
+	  if (!name) return '';
+	  return encodeURIComponent(stringifyPrimitive(name)) + eq +
+	         encodeURIComponent(stringifyPrimitive(obj));
+	};
+
+
+/***/ },
+/* 119 */
+/***/ function(module, exports, __webpack_require__) {
+
 	exports.read = function (buffer, offset, isLE, mLen, nBytes) {
 	  var e, m
 	  var eLen = nBytes * 8 - mLen - 1
@@ -16551,162 +16707,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  buffer[offset + i - d] |= s * 128
 	}
-
-
-/***/ },
-/* 118 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// Copyright Joyent, Inc. and other Node contributors.
-	//
-	// Permission is hereby granted, free of charge, to any person obtaining a
-	// copy of this software and associated documentation files (the
-	// "Software"), to deal in the Software without restriction, including
-	// without limitation the rights to use, copy, modify, merge, publish,
-	// distribute, sublicense, and/or sell copies of the Software, and to permit
-	// persons to whom the Software is furnished to do so, subject to the
-	// following conditions:
-	//
-	// The above copyright notice and this permission notice shall be included
-	// in all copies or substantial portions of the Software.
-	//
-	// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-	// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-	// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-	// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-	// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-	// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-	// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-	'use strict';
-
-	// If obj.hasOwnProperty has been overridden, then calling
-	// obj.hasOwnProperty(prop) will break.
-	// See: https://github.com/joyent/node/issues/1707
-	function hasOwnProperty(obj, prop) {
-	  return Object.prototype.hasOwnProperty.call(obj, prop);
-	}
-
-	module.exports = function(qs, sep, eq, options) {
-	  sep = sep || '&';
-	  eq = eq || '=';
-	  var obj = {};
-
-	  if (typeof qs !== 'string' || qs.length === 0) {
-	    return obj;
-	  }
-
-	  var regexp = /\+/g;
-	  qs = qs.split(sep);
-
-	  var maxKeys = 1000;
-	  if (options && typeof options.maxKeys === 'number') {
-	    maxKeys = options.maxKeys;
-	  }
-
-	  var len = qs.length;
-	  // maxKeys <= 0 means that we should not limit keys count
-	  if (maxKeys > 0 && len > maxKeys) {
-	    len = maxKeys;
-	  }
-
-	  for (var i = 0; i < len; ++i) {
-	    var x = qs[i].replace(regexp, '%20'),
-	        idx = x.indexOf(eq),
-	        kstr, vstr, k, v;
-
-	    if (idx >= 0) {
-	      kstr = x.substr(0, idx);
-	      vstr = x.substr(idx + 1);
-	    } else {
-	      kstr = x;
-	      vstr = '';
-	    }
-
-	    k = decodeURIComponent(kstr);
-	    v = decodeURIComponent(vstr);
-
-	    if (!hasOwnProperty(obj, k)) {
-	      obj[k] = v;
-	    } else if (Array.isArray(obj[k])) {
-	      obj[k].push(v);
-	    } else {
-	      obj[k] = [obj[k], v];
-	    }
-	  }
-
-	  return obj;
-	};
-
-
-/***/ },
-/* 119 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// Copyright Joyent, Inc. and other Node contributors.
-	//
-	// Permission is hereby granted, free of charge, to any person obtaining a
-	// copy of this software and associated documentation files (the
-	// "Software"), to deal in the Software without restriction, including
-	// without limitation the rights to use, copy, modify, merge, publish,
-	// distribute, sublicense, and/or sell copies of the Software, and to permit
-	// persons to whom the Software is furnished to do so, subject to the
-	// following conditions:
-	//
-	// The above copyright notice and this permission notice shall be included
-	// in all copies or substantial portions of the Software.
-	//
-	// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-	// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-	// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-	// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-	// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-	// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-	// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-	'use strict';
-
-	var stringifyPrimitive = function(v) {
-	  switch (typeof v) {
-	    case 'string':
-	      return v;
-
-	    case 'boolean':
-	      return v ? 'true' : 'false';
-
-	    case 'number':
-	      return isFinite(v) ? v : '';
-
-	    default:
-	      return '';
-	  }
-	};
-
-	module.exports = function(obj, sep, eq, name) {
-	  sep = sep || '&';
-	  eq = eq || '=';
-	  if (obj === null) {
-	    obj = undefined;
-	  }
-
-	  if (typeof obj === 'object') {
-	    return Object.keys(obj).map(function(k) {
-	      var ks = encodeURIComponent(stringifyPrimitive(k)) + eq;
-	      if (Array.isArray(obj[k])) {
-	        return obj[k].map(function(v) {
-	          return ks + encodeURIComponent(stringifyPrimitive(v));
-	        }).join(sep);
-	      } else {
-	        return ks + encodeURIComponent(stringifyPrimitive(obj[k]));
-	      }
-	    }).join(sep);
-
-	  }
-
-	  if (!name) return '';
-	  return encodeURIComponent(stringifyPrimitive(name)) + eq +
-	         encodeURIComponent(stringifyPrimitive(obj));
-	};
 
 
 /***/ },
@@ -16854,12 +16854,6 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 122 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* (ignored) */
-
-/***/ },
-/* 123 */
-/***/ function(module, exports, __webpack_require__) {
-
 	/**
 	 * Helpers.
 	 */
@@ -16986,6 +16980,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return Math.ceil(ms / n) + ' ' + name + 's';
 	}
 
+
+/***/ },
+/* 123 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* (ignored) */
 
 /***/ },
 /* 124 */
