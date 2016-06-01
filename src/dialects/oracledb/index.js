@@ -13,7 +13,6 @@ var Promise = require('../../promise');
 var stream = require('stream');
 var helpers = require('../../helpers');
 var Transaction = require('./transaction');
-var OracleQueryStream = require('./stream')
 
 function Client_Oracledb() {
   Client_Oracle.apply(this, arguments);
@@ -201,7 +200,7 @@ Client_Oracledb.prototype._stream = function(connection, obj, stream, options) {
   return new Promise(function (resolver, rejecter) {
     stream.on('error', rejecter);
     stream.on('end', resolver);
-    var queryStream = connection.reader(obj.sql, obj.bindings || []);
+    var queryStream = connection.reader(obj.sql, obj.bindings || [], options);
     queryStream.pipe(stream)
   });
 };
