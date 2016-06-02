@@ -195,13 +195,20 @@ Client_Oracledb.prototype.destroyRawConnection = function(connection, cb) {
   connection.release(cb);
 };
 
-Client_Oracledb.prototype._stream = function(connection, obj, stream, options) {
-  obj.sql = this.positionBindings(obj.sql);
+Client_Oracledb.prototype._stream = function (connection, sql, stream, options) {
+  var client = this;
   return new Promise(function (resolver, rejecter) {
     stream.on('error', rejecter);
     stream.on('end', resolver);
-    var queryStream = connection.reader(obj.sql, obj.bindings || [], options);
-    queryStream.pipe(stream)
+    return client._query(connection, sql).then(function (obj) {
+      return obj.response;
+    }).map(function (row) {
+      stream.write(row);
+    })['catch'](function (err) {
+      stream.emit('error', err);
+    }).then(function () {
+      stream.end();
+    });
   });
 };
 

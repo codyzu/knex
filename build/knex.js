@@ -364,24 +364,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	var helpers = __webpack_require__(3);
 
 	var Raw = __webpack_require__(2);
-	var Runner = __webpack_require__(14);
-	var Formatter = __webpack_require__(15);
-	var Transaction = __webpack_require__(16);
+	var Runner = __webpack_require__(16);
+	var Formatter = __webpack_require__(17);
+	var Transaction = __webpack_require__(18);
 
-	var QueryBuilder = __webpack_require__(17);
-	var QueryCompiler = __webpack_require__(18);
+	var QueryBuilder = __webpack_require__(19);
+	var QueryCompiler = __webpack_require__(20);
 
-	var SchemaBuilder = __webpack_require__(19);
-	var SchemaCompiler = __webpack_require__(20);
-	var TableBuilder = __webpack_require__(21);
-	var TableCompiler = __webpack_require__(22);
-	var ColumnBuilder = __webpack_require__(23);
-	var ColumnCompiler = __webpack_require__(24);
+	var SchemaBuilder = __webpack_require__(21);
+	var SchemaCompiler = __webpack_require__(22);
+	var TableBuilder = __webpack_require__(23);
+	var TableCompiler = __webpack_require__(24);
+	var ColumnBuilder = __webpack_require__(25);
+	var ColumnCompiler = __webpack_require__(26);
 
-	var Pool2 = __webpack_require__(25);
+	var Pool2 = __webpack_require__(27);
 	var inherits = __webpack_require__(52);
 	var EventEmitter = __webpack_require__(39).EventEmitter;
-	var SqlString = __webpack_require__(26);
+	var SqlString = __webpack_require__(28);
 
 	var debug = __webpack_require__(53)('knex:client');
 	var debugQuery = __webpack_require__(53)('knex:query');
@@ -716,10 +716,10 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var EventEmitter = __webpack_require__(39).EventEmitter;
 
-	var Migrator = __webpack_require__(25);
-	var Seeder = __webpack_require__(25);
-	var FunctionHelper = __webpack_require__(27);
-	var QueryInterface = __webpack_require__(28);
+	var Migrator = __webpack_require__(27);
+	var Seeder = __webpack_require__(27);
+	var FunctionHelper = __webpack_require__(14);
+	var QueryInterface = __webpack_require__(15);
 	var helpers = __webpack_require__(3);
 	var Promise = __webpack_require__(9);
 
@@ -1254,6 +1254,36 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
+	
+	// FunctionHelper
+	// -------
+	'use strict';
+
+	function FunctionHelper(client) {
+	  this.client = client;
+	}
+
+	FunctionHelper.prototype.now = function () {
+	  return this.client.raw('CURRENT_TIMESTAMP');
+	};
+
+	module.exports = FunctionHelper;
+
+/***/ },
+/* 15 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	// All properties we can use to start a query chain
+	// from the `knex` object, e.g. `knex.select('*').from(...`
+	'use strict';
+
+	module.exports = ['select', 'as', 'columns', 'column', 'from', 'fromJS', 'into', 'withSchema', 'table', 'distinct', 'join', 'joinRaw', 'innerJoin', 'leftJoin', 'leftOuterJoin', 'rightJoin', 'rightOuterJoin', 'outerJoin', 'fullOuterJoin', 'crossJoin', 'where', 'andWhere', 'orWhere', 'whereNot', 'orWhereNot', 'whereRaw', 'whereWrapped', 'havingWrapped', 'orWhereRaw', 'whereExists', 'orWhereExists', 'whereNotExists', 'orWhereNotExists', 'whereIn', 'orWhereIn', 'whereNotIn', 'orWhereNotIn', 'whereNull', 'orWhereNull', 'whereNotNull', 'orWhereNotNull', 'whereBetween', 'whereNotBetween', 'andWhereBetween', 'andWhereNotBetween', 'orWhereBetween', 'orWhereNotBetween', 'groupBy', 'groupByRaw', 'orderBy', 'orderByRaw', 'union', 'unionAll', 'having', 'havingRaw', 'orHaving', 'orHavingRaw', 'offset', 'limit', 'count', 'countDistinct', 'min', 'max', 'sum', 'sumDistinct', 'avg', 'avgDistinct', 'increment', 'decrement', 'first', 'debug', 'pluck', 'insert', 'update', 'returning', 'del', 'delete', 'truncate', 'transacting', 'connection'];
+
+/***/ },
+/* 16 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 
 	var _lodash = __webpack_require__(1);
@@ -1438,14 +1468,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Runner;
 
 /***/ },
-/* 15 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
 	var _lodash = __webpack_require__(1);
 
-	var QueryBuilder = __webpack_require__(17);
+	var QueryBuilder = __webpack_require__(19);
 	var Raw = __webpack_require__(2);
 
 	function Formatter(client) {
@@ -1621,7 +1651,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Formatter;
 
 /***/ },
-/* 16 */
+/* 18 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -1893,7 +1923,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Transaction;
 
 /***/ },
-/* 17 */
+/* 19 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -2732,7 +2762,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Builder;
 
 /***/ },
-/* 18 */
+/* 20 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -3174,7 +3204,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = QueryCompiler;
 
 /***/ },
-/* 19 */
+/* 21 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3226,7 +3256,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = SchemaBuilder;
 
 /***/ },
-/* 20 */
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3304,7 +3334,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = SchemaCompiler;
 
 /***/ },
-/* 21 */
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -3527,7 +3557,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = TableBuilder;
 
 /***/ },
-/* 22 */
+/* 24 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -3743,7 +3773,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = TableCompiler;
 
 /***/ },
-/* 23 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -3837,7 +3867,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = ColumnBuilder;
 
 /***/ },
-/* 24 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -3982,7 +4012,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = ColumnCompiler;
 
 /***/ },
-/* 25 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -3990,7 +4020,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = function () {};
 
 /***/ },
-/* 26 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict';
@@ -4134,36 +4164,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(94).Buffer))
 
 /***/ },
-/* 27 */
-/***/ function(module, exports, __webpack_require__) {
-
-	
-	// FunctionHelper
-	// -------
-	'use strict';
-
-	function FunctionHelper(client) {
-	  this.client = client;
-	}
-
-	FunctionHelper.prototype.now = function () {
-	  return this.client.raw('CURRENT_TIMESTAMP');
-	};
-
-	module.exports = FunctionHelper;
-
-/***/ },
-/* 28 */
-/***/ function(module, exports, __webpack_require__) {
-
-	
-	// All properties we can use to start a query chain
-	// from the `knex` object, e.g. `knex.select('*').from(...`
-	'use strict';
-
-	module.exports = ['select', 'as', 'columns', 'column', 'from', 'fromJS', 'into', 'withSchema', 'table', 'distinct', 'join', 'joinRaw', 'innerJoin', 'leftJoin', 'leftOuterJoin', 'rightJoin', 'rightOuterJoin', 'outerJoin', 'fullOuterJoin', 'crossJoin', 'where', 'andWhere', 'orWhere', 'whereNot', 'orWhereNot', 'whereRaw', 'whereWrapped', 'havingWrapped', 'orWhereRaw', 'whereExists', 'orWhereExists', 'whereNotExists', 'orWhereNotExists', 'whereIn', 'orWhereIn', 'whereNotIn', 'orWhereNotIn', 'whereNull', 'orWhereNull', 'whereNotNull', 'orWhereNotNull', 'whereBetween', 'whereNotBetween', 'andWhereBetween', 'andWhereNotBetween', 'orWhereBetween', 'orWhereNotBetween', 'groupBy', 'groupByRaw', 'orderBy', 'orderByRaw', 'union', 'unionAll', 'having', 'havingRaw', 'orHaving', 'orHavingRaw', 'offset', 'limit', 'count', 'countDistinct', 'min', 'max', 'sum', 'sumDistinct', 'avg', 'avgDistinct', 'increment', 'decrement', 'first', 'debug', 'pluck', 'insert', 'update', 'returning', 'del', 'delete', 'truncate', 'transacting', 'connection'];
-
-/***/ },
 /* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -4177,7 +4177,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var inherits = __webpack_require__(52);
 	var Client_MySQL = __webpack_require__(31);
 	var Promise = __webpack_require__(9);
-	var SqlString = __webpack_require__(26);
+	var SqlString = __webpack_require__(28);
 	var helpers = __webpack_require__(3);
 	var Transaction = __webpack_require__(56);
 
@@ -4545,11 +4545,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	var Promise = __webpack_require__(9);
 	var helpers = __webpack_require__(3);
 
-	var Transaction = __webpack_require__(63);
-	var QueryCompiler = __webpack_require__(64);
-	var SchemaCompiler = __webpack_require__(65);
-	var TableCompiler = __webpack_require__(66);
-	var ColumnCompiler = __webpack_require__(67);
+	var Transaction = __webpack_require__(64);
+	var QueryCompiler = __webpack_require__(65);
+	var SchemaCompiler = __webpack_require__(66);
+	var TableCompiler = __webpack_require__(67);
+	var ColumnCompiler = __webpack_require__(68);
 
 	function Client_MySQL(config) {
 	  Client.call(this, config);
@@ -4563,7 +4563,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  driverName: 'mysql',
 
 	  _driver: function _driver() {
-	    return __webpack_require__(45);
+	    return __webpack_require__(46);
 	  },
 
 	  QueryCompiler: QueryCompiler,
@@ -4686,7 +4686,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var Promise = __webpack_require__(9);
 	var helpers = __webpack_require__(3);
 
-	var Transaction = __webpack_require__(77);
+	var Transaction = __webpack_require__(63);
 
 	var configOptions = ['isServer', 'stream', 'host', 'port', 'localAddress', 'socketPath', 'user', 'password', 'passwordSha1', 'database', 'connectTimeout', 'insecureAuth', 'supportBigNumbers', 'bigNumberStrings', 'decimalNumbers', 'dateStrings', 'debug', 'trace', 'stringifyObjects', 'timezone', 'flags', 'queryFormat', 'pool', 'ssl', 'multipleStatements', 'namedPlaceholders', 'typeCast', 'charsetNumber', 'compress'];
 
@@ -4706,7 +4706,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  Transaction: Transaction,
 
 	  _driver: function _driver() {
-	    return __webpack_require__(47);
+	    return __webpack_require__(45);
 	  },
 
 	  // Get a raw connection, called by the `pool` whenever a new
@@ -4767,20 +4767,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _lodash = __webpack_require__(1);
 
 	var inherits = __webpack_require__(52);
-	var Formatter = __webpack_require__(68);
+	var Formatter = __webpack_require__(69);
 	var Client = __webpack_require__(4);
 	var Promise = __webpack_require__(9);
 	var helpers = __webpack_require__(3);
-	var SqlString = __webpack_require__(26);
+	var SqlString = __webpack_require__(28);
 
-	var Transaction = __webpack_require__(69);
-	var QueryCompiler = __webpack_require__(70);
-	var SchemaCompiler = __webpack_require__(71);
-	var ColumnBuilder = __webpack_require__(72);
-	var ColumnCompiler = __webpack_require__(73);
-	var TableCompiler = __webpack_require__(74);
-	var OracleQueryStream = __webpack_require__(75);
-	var ReturningHelper = __webpack_require__(76).ReturningHelper;
+	var Transaction = __webpack_require__(70);
+	var QueryCompiler = __webpack_require__(71);
+	var SchemaCompiler = __webpack_require__(72);
+	var ColumnBuilder = __webpack_require__(73);
+	var ColumnCompiler = __webpack_require__(74);
+	var TableCompiler = __webpack_require__(75);
+	var OracleQueryStream = __webpack_require__(76);
+	var ReturningHelper = __webpack_require__(77).ReturningHelper;
 
 	// Always initialize with the "QueryBuilder" and "QueryCompiler"
 	// objects, which extend the base 'lib/query/builder' and
@@ -4797,7 +4797,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  driverName: 'oracle',
 
 	  _driver: function _driver() {
-	    return __webpack_require__(46);
+	    return __webpack_require__(47);
 	  },
 
 	  Transaction: Transaction,
@@ -5141,13 +5141,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	  connection.release(cb);
 	};
 
-	Client_Oracledb.prototype._stream = function (connection, obj, stream, options) {
-	  obj.sql = this.positionBindings(obj.sql);
+	Client_Oracledb.prototype._stream = function (connection, sql, stream, options) {
+	  var client = this;
 	  return new Promise(function (resolver, rejecter) {
 	    stream.on('error', rejecter);
 	    stream.on('end', resolver);
-	    var queryStream = connection.reader(obj.sql, obj.bindings || [], options);
-	    queryStream.pipe(stream);
+	    return client._query(connection, sql).then(function (obj) {
+	      return obj.response;
+	    }).map(function (row) {
+	      stream.write(row);
+	    })['catch'](function (err) {
+	      stream.emit('error', err);
+	    }).then(function () {
+	      stream.end();
+	    });
 	  });
 	};
 
@@ -7358,7 +7365,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _lodash = __webpack_require__(1);
 
-	var Transaction = __webpack_require__(16);
+	var Transaction = __webpack_require__(18);
 	var inherits = __webpack_require__(52);
 	var debug = __webpack_require__(53)('knex:tx');
 	var helpers = __webpack_require__(3);
@@ -7404,7 +7411,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _lodash = __webpack_require__(1);
 
 	var inherits = __webpack_require__(52);
-	var Formatter = __webpack_require__(15);
+	var Formatter = __webpack_require__(17);
 
 	function MSSQL_Formatter(client) {
 	  Formatter.call(this, client);
@@ -7439,7 +7446,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var inherits = __webpack_require__(52);
 	var Promise = __webpack_require__(9);
-	var Transaction = __webpack_require__(16);
+	var Transaction = __webpack_require__(18);
 	var debug = __webpack_require__(53)('knex:tx');
 
 	function Transaction_MSSQL() {
@@ -7546,7 +7553,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _lodash = __webpack_require__(1);
 
 	var inherits = __webpack_require__(52);
-	var QueryCompiler = __webpack_require__(18);
+	var QueryCompiler = __webpack_require__(20);
 
 	function QueryCompiler_MSSQL(client, builder) {
 	  QueryCompiler.call(this, client, builder);
@@ -7736,7 +7743,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _lodash = __webpack_require__(1);
 
 	var inherits = __webpack_require__(52);
-	var SchemaCompiler = __webpack_require__(20);
+	var SchemaCompiler = __webpack_require__(22);
 
 	function SchemaCompiler_MSSQL(client, builder) {
 	  SchemaCompiler.call(this, client, builder);
@@ -7799,7 +7806,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	// ------
 
 	var inherits = __webpack_require__(52);
-	var TableCompiler = __webpack_require__(22);
+	var TableCompiler = __webpack_require__(24);
 	var helpers = __webpack_require__(3);
 	var Promise = __webpack_require__(9);
 
@@ -7929,7 +7936,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _lodash = __webpack_require__(1);
 
 	var inherits = __webpack_require__(52);
-	var ColumnCompiler = __webpack_require__(24);
+	var ColumnCompiler = __webpack_require__(26);
 	var helpers = __webpack_require__(3);
 
 	function ColumnCompiler_MSSQL() {
@@ -8035,7 +8042,52 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _lodash = __webpack_require__(1);
 
-	var Transaction = __webpack_require__(16);
+	var Transaction = __webpack_require__(18);
+	var inherits = __webpack_require__(52);
+	var debug = __webpack_require__(53)('knex:tx');
+	var helpers = __webpack_require__(3);
+
+	function Transaction_MySQL2() {
+	  Transaction.apply(this, arguments);
+	}
+	inherits(Transaction_MySQL2, Transaction);
+
+	(0, _lodash.assign)(Transaction_MySQL2.prototype, {
+
+	  query: function query(conn, sql, status, value) {
+	    var t = this;
+	    var q = this.trxClient.query(conn, sql)['catch'](function (err) {
+	      return err.code === 'ER_SP_DOES_NOT_EXIST';
+	    }, function () {
+	      helpers.warn('Transaction was implicitly committed, do not mix transactions and DDL with MySQL (#805)');
+	    })['catch'](function (err) {
+	      status = 2;
+	      value = err;
+	      t._completed = true;
+	      debug('%s error running transaction query', t.txid);
+	    }).tap(function () {
+	      if (status === 1) t._resolver(value);
+	      if (status === 2) t._rejecter(value);
+	    });
+	    if (status === 1 || status === 2) {
+	      t._completed = true;
+	    }
+	    return q;
+	  }
+
+	});
+
+	module.exports = Transaction_MySQL2;
+
+/***/ },
+/* 64 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var _lodash = __webpack_require__(1);
+
+	var Transaction = __webpack_require__(18);
 	var inherits = __webpack_require__(52);
 	var debug = __webpack_require__(53)('knex:tx');
 	var helpers = __webpack_require__(3);
@@ -8073,7 +8125,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Transaction_MySQL;
 
 /***/ },
-/* 64 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -8084,7 +8136,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _lodash = __webpack_require__(1);
 
 	var inherits = __webpack_require__(52);
-	var QueryCompiler = __webpack_require__(18);
+	var QueryCompiler = __webpack_require__(20);
 
 	function QueryCompiler_MySQL(client, builder) {
 	  QueryCompiler.call(this, client, builder);
@@ -8149,7 +8201,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = QueryCompiler_MySQL;
 
 /***/ },
-/* 65 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -8160,7 +8212,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _lodash = __webpack_require__(1);
 
 	var inherits = __webpack_require__(52);
-	var SchemaCompiler = __webpack_require__(20);
+	var SchemaCompiler = __webpack_require__(22);
 
 	function SchemaCompiler_MySQL(client, builder) {
 	  SchemaCompiler.call(this, client, builder);
@@ -8199,7 +8251,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = SchemaCompiler_MySQL;
 
 /***/ },
-/* 66 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -8213,7 +8265,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	// ------
 
 	var inherits = __webpack_require__(52);
-	var TableCompiler = __webpack_require__(22);
+	var TableCompiler = __webpack_require__(24);
 	var helpers = __webpack_require__(3);
 	var Promise = __webpack_require__(9);
 
@@ -8396,7 +8448,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = TableCompiler_MySQL;
 
 /***/ },
-/* 67 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -8407,7 +8459,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _lodash = __webpack_require__(1);
 
 	var inherits = __webpack_require__(52);
-	var ColumnCompiler = __webpack_require__(24);
+	var ColumnCompiler = __webpack_require__(26);
 	var helpers = __webpack_require__(3);
 
 	function ColumnCompiler_MySQL() {
@@ -8523,7 +8575,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = ColumnCompiler_MySQL;
 
 /***/ },
-/* 68 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8531,8 +8583,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _lodash = __webpack_require__(1);
 
 	var inherits = __webpack_require__(52);
-	var Formatter = __webpack_require__(15);
-	var ReturningHelper = __webpack_require__(76).ReturningHelper;
+	var Formatter = __webpack_require__(17);
+	var ReturningHelper = __webpack_require__(77).ReturningHelper;
 
 	function Oracle_Formatter(client) {
 	  Formatter.call(this, client);
@@ -8560,7 +8612,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Oracle_Formatter;
 
 /***/ },
-/* 69 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8569,7 +8621,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var inherits = __webpack_require__(52);
 	var Promise = __webpack_require__(9);
-	var Transaction = __webpack_require__(16);
+	var Transaction = __webpack_require__(18);
 	var debugTx = __webpack_require__(53)('knex:tx');
 
 	function Oracle_Transaction(client, container, config, outerTx) {
@@ -8623,7 +8675,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = Oracle_Transaction;
 
 /***/ },
-/* 70 */
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -8634,9 +8686,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _lodash = __webpack_require__(1);
 
 	var inherits = __webpack_require__(52);
-	var QueryCompiler = __webpack_require__(18);
+	var QueryCompiler = __webpack_require__(20);
 	var helpers = __webpack_require__(3);
-	var ReturningHelper = __webpack_require__(76).ReturningHelper;
+	var ReturningHelper = __webpack_require__(77).ReturningHelper;
 
 	// Query Compiler
 	// -------
@@ -8855,7 +8907,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = QueryCompiler_Oracle;
 
 /***/ },
-/* 71 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -8864,8 +8916,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	var inherits = __webpack_require__(52);
-	var SchemaCompiler = __webpack_require__(20);
-	var utils = __webpack_require__(76);
+	var SchemaCompiler = __webpack_require__(22);
+	var utils = __webpack_require__(77);
 
 	function SchemaCompiler_Oracle() {
 	  SchemaCompiler.apply(this, arguments);
@@ -8924,7 +8976,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = SchemaCompiler_Oracle;
 
 /***/ },
-/* 72 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8932,7 +8984,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _lodash = __webpack_require__(1);
 
 	var inherits = __webpack_require__(52);
-	var ColumnBuilder = __webpack_require__(23);
+	var ColumnBuilder = __webpack_require__(25);
 
 	function ColumnBuilder_Oracle() {
 	  ColumnBuilder.apply(this, arguments);
@@ -8949,7 +9001,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = ColumnBuilder_Oracle;
 
 /***/ },
-/* 73 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -8957,9 +9009,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _lodash = __webpack_require__(1);
 
 	var inherits = __webpack_require__(52);
-	var utils = __webpack_require__(76);
+	var utils = __webpack_require__(77);
 	var Raw = __webpack_require__(2);
-	var ColumnCompiler = __webpack_require__(24);
+	var ColumnCompiler = __webpack_require__(26);
 
 	// Column Compiler
 	// -------
@@ -9087,7 +9139,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = ColumnCompiler_Oracle;
 
 /***/ },
-/* 74 */
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9098,8 +9150,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	// ------
 
 	var inherits = __webpack_require__(52);
-	var utils = __webpack_require__(76);
-	var TableCompiler = __webpack_require__(22);
+	var utils = __webpack_require__(77);
+	var TableCompiler = __webpack_require__(24);
 	var helpers = __webpack_require__(3);
 
 	function TableCompiler_Oracle() {
@@ -9193,7 +9245,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = TableCompiler_Oracle;
 
 /***/ },
-/* 75 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {
@@ -9252,7 +9304,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(11)))
 
 /***/ },
-/* 76 */
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9293,51 +9345,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	};
 
 /***/ },
-/* 77 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var _lodash = __webpack_require__(1);
-
-	var Transaction = __webpack_require__(16);
-	var inherits = __webpack_require__(52);
-	var debug = __webpack_require__(53)('knex:tx');
-	var helpers = __webpack_require__(3);
-
-	function Transaction_MySQL2() {
-	  Transaction.apply(this, arguments);
-	}
-	inherits(Transaction_MySQL2, Transaction);
-
-	(0, _lodash.assign)(Transaction_MySQL2.prototype, {
-
-	  query: function query(conn, sql, status, value) {
-	    var t = this;
-	    var q = this.trxClient.query(conn, sql)['catch'](function (err) {
-	      return err.code === 'ER_SP_DOES_NOT_EXIST';
-	    }, function () {
-	      helpers.warn('Transaction was implicitly committed, do not mix transactions and DDL with MySQL (#805)');
-	    })['catch'](function (err) {
-	      status = 2;
-	      value = err;
-	      t._completed = true;
-	      debug('%s error running transaction query', t.txid);
-	    }).tap(function () {
-	      if (status === 1) t._resolver(value);
-	      if (status === 2) t._rejecter(value);
-	    });
-	    if (status === 1 || status === 2) {
-	      t._completed = true;
-	    }
-	    return q;
-	  }
-
-	});
-
-	module.exports = Transaction_MySQL2;
-
-/***/ },
 /* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -9345,7 +9352,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _ = __webpack_require__(1);
 	var inherits = __webpack_require__(52);
-	var Oracle_Compiler = __webpack_require__(70);
+	var Oracle_Compiler = __webpack_require__(71);
 	var ReturningHelper = __webpack_require__(81).ReturningHelper;
 	var BlobHelper = __webpack_require__(81).BlobHelper;
 
@@ -9621,7 +9628,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _lodash = __webpack_require__(1);
 
 	var inherits = __webpack_require__(52);
-	var ColumnCompiler_Oracle = __webpack_require__(73);
+	var ColumnCompiler_Oracle = __webpack_require__(74);
 
 	function ColumnCompiler_Oracledb() {
 	  ColumnCompiler_Oracle.apply(this, arguments);
@@ -9654,7 +9661,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _lodash = __webpack_require__(1);
 
 	var inherits = __webpack_require__(52);
-	var Oracle_Formatter = __webpack_require__(68);
+	var Oracle_Formatter = __webpack_require__(69);
 	var BlobHelper = __webpack_require__(81).BlobHelper;
 
 	function Oracledb_Formatter(client) {
@@ -9685,7 +9692,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	var Utils = __webpack_require__(76);
+	var Utils = __webpack_require__(77);
 
 	function BlobHelper(columnName, value) {
 	  this.columnName = columnName;
@@ -9710,7 +9717,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var inherits = __webpack_require__(52);
 	var Promise = __webpack_require__(9);
-	var Transaction = __webpack_require__(16);
+	var Transaction = __webpack_require__(18);
 	var debugTx = __webpack_require__(53)('knex:tx');
 
 	function Oracle_Transaction(client, container, config, outerTx) {
@@ -9881,7 +9888,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var inherits = __webpack_require__(52);
 
-	var QueryCompiler = __webpack_require__(18);
+	var QueryCompiler = __webpack_require__(20);
 
 	function QueryCompiler_PG(client, builder) {
 	  QueryCompiler.call(this, client, builder);
@@ -9992,7 +9999,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _lodash = __webpack_require__(1);
 
 	var inherits = __webpack_require__(52);
-	var ColumnCompiler = __webpack_require__(24);
+	var ColumnCompiler = __webpack_require__(26);
 	var helpers = __webpack_require__(3);
 
 	function ColumnCompiler_PG() {
@@ -10070,7 +10077,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _lodash = __webpack_require__(1);
 
 	var inherits = __webpack_require__(52);
-	var TableCompiler = __webpack_require__(22);
+	var TableCompiler = __webpack_require__(24);
 
 	function TableCompiler_PG() {
 	  TableCompiler.apply(this, arguments);
@@ -10154,7 +10161,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	var inherits = __webpack_require__(52);
-	var SchemaCompiler = __webpack_require__(20);
+	var SchemaCompiler = __webpack_require__(22);
 
 	function SchemaCompiler_PG() {
 	  SchemaCompiler.apply(this, arguments);
@@ -10259,7 +10266,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	var _lodash = __webpack_require__(1);
 
 	var inherits = __webpack_require__(52);
-	var QueryCompiler = __webpack_require__(18);
+	var QueryCompiler = __webpack_require__(20);
 
 	function QueryCompiler_SQLite3(client, builder) {
 	  QueryCompiler.call(this, client, builder);
@@ -10387,7 +10394,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	// -------
 
 	var inherits = __webpack_require__(52);
-	var SchemaCompiler = __webpack_require__(20);
+	var SchemaCompiler = __webpack_require__(22);
 
 	function SchemaCompiler_SQLite3() {
 	  SchemaCompiler.apply(this, arguments);
@@ -10428,7 +10435,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict';
 
 	var inherits = __webpack_require__(52);
-	var ColumnCompiler = __webpack_require__(24);
+	var ColumnCompiler = __webpack_require__(26);
 
 	// Column Compiler
 	// -------
@@ -10459,7 +10466,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	// -------
 
 	var inherits = __webpack_require__(52);
-	var TableCompiler = __webpack_require__(22);
+	var TableCompiler = __webpack_require__(24);
 
 	function TableCompiler_SQLite3() {
 	  TableCompiler.apply(this, arguments);
@@ -11311,7 +11318,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	'use strict'
 
 	var base64 = __webpack_require__(120)
-	var ieee754 = __webpack_require__(116)
+	var ieee754 = __webpack_require__(118)
 	var isArray = __webpack_require__(119)
 
 	exports.Buffer = Buffer
@@ -13210,8 +13217,8 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 
-	exports.decode = exports.parse = __webpack_require__(117);
-	exports.encode = exports.stringify = __webpack_require__(118);
+	exports.decode = exports.parse = __webpack_require__(116);
+	exports.encode = exports.stringify = __webpack_require__(117);
 
 
 /***/ },
@@ -16407,6 +16414,162 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 116 */
 /***/ function(module, exports, __webpack_require__) {
 
+	// Copyright Joyent, Inc. and other Node contributors.
+	//
+	// Permission is hereby granted, free of charge, to any person obtaining a
+	// copy of this software and associated documentation files (the
+	// "Software"), to deal in the Software without restriction, including
+	// without limitation the rights to use, copy, modify, merge, publish,
+	// distribute, sublicense, and/or sell copies of the Software, and to permit
+	// persons to whom the Software is furnished to do so, subject to the
+	// following conditions:
+	//
+	// The above copyright notice and this permission notice shall be included
+	// in all copies or substantial portions of the Software.
+	//
+	// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+	// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+	// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+	// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+	// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+	// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+	// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+	'use strict';
+
+	// If obj.hasOwnProperty has been overridden, then calling
+	// obj.hasOwnProperty(prop) will break.
+	// See: https://github.com/joyent/node/issues/1707
+	function hasOwnProperty(obj, prop) {
+	  return Object.prototype.hasOwnProperty.call(obj, prop);
+	}
+
+	module.exports = function(qs, sep, eq, options) {
+	  sep = sep || '&';
+	  eq = eq || '=';
+	  var obj = {};
+
+	  if (typeof qs !== 'string' || qs.length === 0) {
+	    return obj;
+	  }
+
+	  var regexp = /\+/g;
+	  qs = qs.split(sep);
+
+	  var maxKeys = 1000;
+	  if (options && typeof options.maxKeys === 'number') {
+	    maxKeys = options.maxKeys;
+	  }
+
+	  var len = qs.length;
+	  // maxKeys <= 0 means that we should not limit keys count
+	  if (maxKeys > 0 && len > maxKeys) {
+	    len = maxKeys;
+	  }
+
+	  for (var i = 0; i < len; ++i) {
+	    var x = qs[i].replace(regexp, '%20'),
+	        idx = x.indexOf(eq),
+	        kstr, vstr, k, v;
+
+	    if (idx >= 0) {
+	      kstr = x.substr(0, idx);
+	      vstr = x.substr(idx + 1);
+	    } else {
+	      kstr = x;
+	      vstr = '';
+	    }
+
+	    k = decodeURIComponent(kstr);
+	    v = decodeURIComponent(vstr);
+
+	    if (!hasOwnProperty(obj, k)) {
+	      obj[k] = v;
+	    } else if (Array.isArray(obj[k])) {
+	      obj[k].push(v);
+	    } else {
+	      obj[k] = [obj[k], v];
+	    }
+	  }
+
+	  return obj;
+	};
+
+
+/***/ },
+/* 117 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// Copyright Joyent, Inc. and other Node contributors.
+	//
+	// Permission is hereby granted, free of charge, to any person obtaining a
+	// copy of this software and associated documentation files (the
+	// "Software"), to deal in the Software without restriction, including
+	// without limitation the rights to use, copy, modify, merge, publish,
+	// distribute, sublicense, and/or sell copies of the Software, and to permit
+	// persons to whom the Software is furnished to do so, subject to the
+	// following conditions:
+	//
+	// The above copyright notice and this permission notice shall be included
+	// in all copies or substantial portions of the Software.
+	//
+	// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+	// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+	// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
+	// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+	// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+	// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+	// USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+	'use strict';
+
+	var stringifyPrimitive = function(v) {
+	  switch (typeof v) {
+	    case 'string':
+	      return v;
+
+	    case 'boolean':
+	      return v ? 'true' : 'false';
+
+	    case 'number':
+	      return isFinite(v) ? v : '';
+
+	    default:
+	      return '';
+	  }
+	};
+
+	module.exports = function(obj, sep, eq, name) {
+	  sep = sep || '&';
+	  eq = eq || '=';
+	  if (obj === null) {
+	    obj = undefined;
+	  }
+
+	  if (typeof obj === 'object') {
+	    return Object.keys(obj).map(function(k) {
+	      var ks = encodeURIComponent(stringifyPrimitive(k)) + eq;
+	      if (Array.isArray(obj[k])) {
+	        return obj[k].map(function(v) {
+	          return ks + encodeURIComponent(stringifyPrimitive(v));
+	        }).join(sep);
+	      } else {
+	        return ks + encodeURIComponent(stringifyPrimitive(obj[k]));
+	      }
+	    }).join(sep);
+
+	  }
+
+	  if (!name) return '';
+	  return encodeURIComponent(stringifyPrimitive(name)) + eq +
+	         encodeURIComponent(stringifyPrimitive(obj));
+	};
+
+
+/***/ },
+/* 118 */
+/***/ function(module, exports, __webpack_require__) {
+
 	exports.read = function (buffer, offset, isLE, mLen, nBytes) {
 	  var e, m
 	  var eLen = nBytes * 8 - mLen - 1
@@ -16491,162 +16654,6 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	  buffer[offset + i - d] |= s * 128
 	}
-
-
-/***/ },
-/* 117 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// Copyright Joyent, Inc. and other Node contributors.
-	//
-	// Permission is hereby granted, free of charge, to any person obtaining a
-	// copy of this software and associated documentation files (the
-	// "Software"), to deal in the Software without restriction, including
-	// without limitation the rights to use, copy, modify, merge, publish,
-	// distribute, sublicense, and/or sell copies of the Software, and to permit
-	// persons to whom the Software is furnished to do so, subject to the
-	// following conditions:
-	//
-	// The above copyright notice and this permission notice shall be included
-	// in all copies or substantial portions of the Software.
-	//
-	// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-	// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-	// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-	// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-	// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-	// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-	// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-	'use strict';
-
-	// If obj.hasOwnProperty has been overridden, then calling
-	// obj.hasOwnProperty(prop) will break.
-	// See: https://github.com/joyent/node/issues/1707
-	function hasOwnProperty(obj, prop) {
-	  return Object.prototype.hasOwnProperty.call(obj, prop);
-	}
-
-	module.exports = function(qs, sep, eq, options) {
-	  sep = sep || '&';
-	  eq = eq || '=';
-	  var obj = {};
-
-	  if (typeof qs !== 'string' || qs.length === 0) {
-	    return obj;
-	  }
-
-	  var regexp = /\+/g;
-	  qs = qs.split(sep);
-
-	  var maxKeys = 1000;
-	  if (options && typeof options.maxKeys === 'number') {
-	    maxKeys = options.maxKeys;
-	  }
-
-	  var len = qs.length;
-	  // maxKeys <= 0 means that we should not limit keys count
-	  if (maxKeys > 0 && len > maxKeys) {
-	    len = maxKeys;
-	  }
-
-	  for (var i = 0; i < len; ++i) {
-	    var x = qs[i].replace(regexp, '%20'),
-	        idx = x.indexOf(eq),
-	        kstr, vstr, k, v;
-
-	    if (idx >= 0) {
-	      kstr = x.substr(0, idx);
-	      vstr = x.substr(idx + 1);
-	    } else {
-	      kstr = x;
-	      vstr = '';
-	    }
-
-	    k = decodeURIComponent(kstr);
-	    v = decodeURIComponent(vstr);
-
-	    if (!hasOwnProperty(obj, k)) {
-	      obj[k] = v;
-	    } else if (Array.isArray(obj[k])) {
-	      obj[k].push(v);
-	    } else {
-	      obj[k] = [obj[k], v];
-	    }
-	  }
-
-	  return obj;
-	};
-
-
-/***/ },
-/* 118 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// Copyright Joyent, Inc. and other Node contributors.
-	//
-	// Permission is hereby granted, free of charge, to any person obtaining a
-	// copy of this software and associated documentation files (the
-	// "Software"), to deal in the Software without restriction, including
-	// without limitation the rights to use, copy, modify, merge, publish,
-	// distribute, sublicense, and/or sell copies of the Software, and to permit
-	// persons to whom the Software is furnished to do so, subject to the
-	// following conditions:
-	//
-	// The above copyright notice and this permission notice shall be included
-	// in all copies or substantial portions of the Software.
-	//
-	// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-	// OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-	// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN
-	// NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-	// DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
-	// OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
-	// USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-	'use strict';
-
-	var stringifyPrimitive = function(v) {
-	  switch (typeof v) {
-	    case 'string':
-	      return v;
-
-	    case 'boolean':
-	      return v ? 'true' : 'false';
-
-	    case 'number':
-	      return isFinite(v) ? v : '';
-
-	    default:
-	      return '';
-	  }
-	};
-
-	module.exports = function(obj, sep, eq, name) {
-	  sep = sep || '&';
-	  eq = eq || '=';
-	  if (obj === null) {
-	    obj = undefined;
-	  }
-
-	  if (typeof obj === 'object') {
-	    return Object.keys(obj).map(function(k) {
-	      var ks = encodeURIComponent(stringifyPrimitive(k)) + eq;
-	      if (Array.isArray(obj[k])) {
-	        return obj[k].map(function(v) {
-	          return ks + encodeURIComponent(stringifyPrimitive(v));
-	        }).join(sep);
-	      } else {
-	        return ks + encodeURIComponent(stringifyPrimitive(obj[k]));
-	      }
-	    }).join(sep);
-
-	  }
-
-	  if (!name) return '';
-	  return encodeURIComponent(stringifyPrimitive(name)) + eq +
-	         encodeURIComponent(stringifyPrimitive(obj));
-	};
 
 
 /***/ },
